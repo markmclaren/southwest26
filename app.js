@@ -10,6 +10,7 @@ const GEOJSON_URL = 'places.geojson';
 const MAP_STYLE   = 'https://tiles.openfreemap.org/styles/bright';
 const MAP_CENTER  = [-2.35, 51.35];
 const MAP_ZOOM    = 8.5;
+const DEBUG_PAN   = true;
 
 // ── CATEGORY HELPERS ─────────────────────────────────────────
 const CAT_CLASS = {
@@ -31,12 +32,24 @@ function googleMapsDirectionsUrl(feature) {
   return `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=driving`;
 }
 
+function debugPan(event, details = {}) {
+  if (!DEBUG_PAN) return;
+  const center = map.getCenter();
+  console.log('[PAN_DEBUG]', event, {
+    activeDay,
+    center: [Number(center.lng.toFixed(6)), Number(center.lat.toFixed(6))],
+    zoom: Number(map.getZoom().toFixed(3)),
+    ...details,
+  });
+}
+
 // ── STATE ─────────────────────────────────────────────────────
 let allFeatures  = [];
 let activeDay    = 'all';                                   // 'all' | ISO date string
 let activeCats   = new Set(['Itinerary Stop', 'Food Option']);
 let activeMarker = null;
 let markers      = [];
+let pendingPanRaf = null;
 
 // ── MAP INIT ─────────────────────────────────────────────────
 const map = new maplibregl.Map({
@@ -50,6 +63,14 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.FullscreenControl(), 'top-right');
 
+map.on('movestart', () => {
+  debugPan('movestart', { moving: map.isMoving() });
+});
+
+map.on('moveend', () => {
+  debugPan('moveend', { moving: map.isMoving() });
+});
+
 // ── LOAD DATA ─────────────────────────────────────────────────
 fetch(GEOJSON_URL)
   .then(r => r.json())
@@ -60,7 +81,7 @@ fetch(GEOJSON_URL)
     buildSidebar();
     addMarkers();
     applyFilters();
-    panToVisibleCentroid();
+    schedulePanToVisibleCentroid('initial-load');
   })
   .catch(err => console.error('Failed to load places.geojson:', err));
 
@@ -93,6 +114,48 @@ function applyFilters() {
   });
 }
 
+function computeGeographicCentroid(features) {
+  let x = 0;
+  let y = 0;
+  let z = 0;
+
+  features.forEach(feature => {
+    const [lng, lat] = feature.geometry.coordinates;
+    const lngRad = (lng * Math.PI) / 180;
+    const latRad = (lat * Math.PI) / 180;
+    const cosLat = Math.cos(latRad);
+
+    x += cosLat * Math.cos(lngRad);
+    y += cosLat * Math.sin(lngRad);
+    z += Math.sin(latRad);
+  });
+
+  x /= features.length;
+  y /= features.length;
+  z /= features.length;
+
+  const lng = Math.atan2(y, x);
+  const hyp = Math.sqrt((x * x) + (y * y));
+  const lat = Math.atan2(z, hyp);
+
+  return [(lng * 180) / Math.PI, (lat * 180) / Math.PI];
+}
+
+function computeCentroid(features) {
+  if (typeof turf !== 'undefined') {
+    const points = features.map(feature => turf.point(feature.geometry.coordinates));
+    const fc = turf.featureCollection(points);
+
+    if (typeof turf.centerMean === 'function') {
+      return { coordinates: turf.centerMean(fc).geometry.coordinates, method: 'turf.centerMean' };
+    }
+
+    return { coordinates: turf.centroid(fc).geometry.coordinates, method: 'turf.centroid' };
+  }
+
+  return { coordinates: computeGeographicCentroid(features), method: 'geographic-fallback' };
+}
+
 function panToVisibleCentroid() {
   const day = (activeDay || '').trim();
   const targets = day === 'all'
@@ -102,29 +165,57 @@ function panToVisibleCentroid() {
       return activeCats.has(p.category) && (p.date || '').trim() === day;
     });
 
-  if (!targets.length) return;
+  debugPan('panToVisibleCentroid:targets', {
+    day,
+    targetCount: targets.length,
+    targetTitles: targets.map(f => f.properties.title),
+  });
+
+  if (!targets.length) {
+    debugPan('panToVisibleCentroid:no-targets');
+    return;
+  }
+
+  // Cancel any in-flight animation so a previous "All" pan cannot override this one.
+  map.stop();
+  debugPan('panToVisibleCentroid:after-stop', { moving: map.isMoving() });
 
   // Popups can auto-pan the map and offset centering; close them before recentering.
   markers.forEach(({ marker }) => marker.getPopup().remove());
 
   if (targets.length === 1) {
     const [lng, lat] = targets[0].geometry.coordinates;
+    debugPan('panToVisibleCentroid:single', {
+      destination: [lng, lat],
+      title: targets[0].properties.title,
+    });
     map.easeTo({ center: [lng, lat], duration: 700 });
     return;
   }
 
-  let lngSum = 0;
-  let latSum = 0;
-
-  targets.forEach(feature => {
-    const [lng, lat] = feature.geometry.coordinates;
-    lngSum += lng;
-    latSum += lat;
-  });
+  const centroid = computeCentroid(targets);
+  const [centroidLng, centroidLat] = centroid.coordinates;
 
   map.easeTo({
-    center: [lngSum / targets.length, latSum / targets.length],
+    center: [centroidLng, centroidLat],
     duration: 700,
+  });
+  debugPan('panToVisibleCentroid:centroid', {
+    method: centroid.method,
+    destination: [centroidLng, centroidLat],
+  });
+}
+
+function schedulePanToVisibleCentroid(reason) {
+  if (pendingPanRaf !== null) {
+    cancelAnimationFrame(pendingPanRaf);
+  }
+
+  pendingPanRaf = requestAnimationFrame(() => {
+    pendingPanRaf = null;
+    map.resize();
+    debugPan('schedulePanToVisibleCentroid:after-resize', { reason });
+    panToVisibleCentroid();
   });
 }
 
@@ -153,7 +244,7 @@ function buildDayFilters() {
     });
 
     daySelect.value = activeDay;
-    daySelect.addEventListener('change', (e) => setDay(e.target.value));
+    daySelect.addEventListener('change', (e) => setDay(e.target.value, 'select'));
   }
 
   dates.forEach(iso => {
@@ -161,15 +252,16 @@ function buildDayFilters() {
     btn.className    = 'btn btn-filter';
     btn.dataset.filter = iso;
     btn.textContent  = formatDate(iso);
-    btn.addEventListener('click', () => setDay(iso));
+    btn.addEventListener('click', () => setDay(iso, 'button'));
     bar.appendChild(btn);
   });
 
   document.querySelector('[data-filter="all"]')
-    .addEventListener('click', () => setDay('all'));
+    .addEventListener('click', () => setDay('all', 'button'));
 }
 
-function setDay(value) {
+function setDay(value, source = 'unknown') {
+  debugPan('setDay:start', { value, source });
   activeDay = value;
   document.querySelectorAll('.btn-filter').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === value);
@@ -181,7 +273,10 @@ function setDay(value) {
   }
 
   applyFilters();
-  panToVisibleCentroid();
+  debugPan('setDay:after-applyFilters', {
+    visibleCount: allFeatures.filter(isVisible).length,
+  });
+  schedulePanToVisibleCentroid(`setDay:${source}`);
 }
 
 // ── CATEGORY TOGGLES ─────────────────────────────────────────

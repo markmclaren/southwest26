@@ -166,6 +166,24 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "The Anchor Inn (Tintern)",
+        "category": "Food Option",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Traditional riverside pub in Tintern, ideal lunch or dinner stop alongside the abbey visit.",
+        "website": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6762,
+          51.6966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Tidenham Chase (Meet Point)",
         "category": "Itinerary Stop",
         "date": "2026-07-31",
