@@ -380,11 +380,16 @@ function addMarkers() {
 
     el.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (marker.getPopup().isOpen()) {
-        marker.getPopup().remove();
+      const isMobile = window.matchMedia('(max-width: 991px)').matches;
+      if (!isMobile) {
+        if (marker.getPopup().isOpen()) {
+          marker.getPopup().remove();
+        } else {
+          markers.forEach(m => m.marker.getPopup().remove());
+          marker.togglePopup();
+        }
       } else {
         markers.forEach(m => m.marker.getPopup().remove());
-        marker.togglePopup();
       }
       openDetail(feature, idx);
       setActiveItem(document.querySelector(`.place-item[data-idx="${idx}"]`));
@@ -463,3 +468,28 @@ detailOverlay.addEventListener('click', closeDetail);
 map.on('click', () => {
   if (detailPanel.classList.contains('open')) closeDetail();
 });
+
+// Sidebar list toggling logic
+const toggleListBtn = document.getElementById('toggleListBtn');
+if (toggleListBtn) {
+  toggleListBtn.addEventListener('click', () => {
+    const mainRow = document.querySelector('.main-row');
+    const isCollapsed = mainRow.classList.toggle('sidebar-collapsed');
+    
+    // Update button content
+    const icon = toggleListBtn.querySelector('i');
+    const text = toggleListBtn.querySelector('.btn-text');
+    if (isCollapsed) {
+      if (icon) icon.className = 'bi bi-layout-sidebar-inset';
+      if (text) text.textContent = 'Show List';
+    } else {
+      if (icon) icon.className = 'bi bi-layout-sidebar';
+      if (text) text.textContent = 'Hide List';
+    }
+    
+    // Resize map to fit new dimensions
+    setTimeout(() => {
+      map.resize();
+    }, 250); // Allow CSS transitions to complete
+  });
+}

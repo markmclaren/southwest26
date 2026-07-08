@@ -124,6 +124,29 @@ body {
   background: #f0fdf4;
 }
 
+/* Sidebar toggle button */
+.btn-toggle-list {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--col-header);
+  background: #fff;
+  color: var(--col-header);
+  transition: all 0.15s;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.btn-toggle-list:hover {
+  background: var(--col-header);
+  color: #fff;
+}
+.btn-toggle-list.active {
+  background: var(--col-header);
+  color: #fff;
+}
+
 /* ── MAIN LAYOUT ────────────────────────────────────────────── */
 .main-row {
   height: calc(100vh - var(--header-h) - var(--filter-h));
@@ -375,9 +398,42 @@ body {
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 991px) {
-  .main-row { height: auto; flex-direction: column; }
-  .sidebar { max-height: 42vh; border-right: none; border-bottom: 1px solid #e2e8f0; }
-  .map-section { height: 55vh; }
+  :root {
+    --header-h: 56px;
+    --filter-h: 88px;
+  }
+  .site-header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .header-flag {
+    font-size: 1.5rem;
+  }
+  .site-header h1 {
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+  .site-header .subtitle {
+    font-size: 0.75rem;
+  }
+  .filter-bar {
+    min-height: auto;
+  }
+  .main-row {
+    height: calc(100vh - var(--header-h) - var(--filter-h));
+    flex-direction: column;
+    display: flex;
+  }
+  .sidebar {
+    max-height: 40%;
+    flex: 0 0 40%;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .map-section {
+    flex: 1;
+    height: auto;
+  }
   #map { height: 100%; }
 }
 
@@ -394,6 +450,27 @@ body {
 
   .day-filter-row .day-select {
     width: 100%;
+  }
+}
+
+/* Sidebar Collapsed State (Desktop & Mobile) */
+.sidebar {
+  transition: width 0.2s ease, max-height 0.2s ease, opacity 0.2s ease;
+}
+.main-row.sidebar-collapsed .sidebar {
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .main-row.sidebar-collapsed .map-section {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 991px) {
+  .main-row.sidebar-collapsed .map-section {
+    height: 100% !important;
+    flex: 1 0 100% !important;
   }
 }
 
