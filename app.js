@@ -179,8 +179,6 @@ function panToVisibleCentroid() {
   map.stop();
   debugPan('panToVisibleCentroid:after-stop', { moving: map.isMoving() });
 
-  // Popups can auto-pan the map and offset centering; close them before recentering.
-  markers.forEach(({ marker }) => marker.getPopup().remove());
 
   if (targets.length === 1) {
     const [lng, lat] = targets[0].geometry.coordinates;
@@ -360,37 +358,12 @@ function addMarkers() {
     pin.className = `map-marker ${catClass(p.category)}`;
     el.appendChild(pin);
 
-    const popup = new maplibregl.Popup({
-      offset: 18,
-      closeButton: false,
-      closeOnClick: false,
-      maxWidth: '240px',
-    }).setHTML(`
-      <div class="popup-title">${p.title}</div>
-      ${p.date ? `<div style="font-size:0.72rem;color:#64748b;margin-bottom:4px">${formatDate(p.date)}</div>` : ''}
-      <div class="popup-desc">${p.description}</div>
-      <a class="popup-link" href="${directionsHref}" target="_blank" rel="noopener">Directions in Google Maps ↗</a>
-      ${p.website ? `<a class="popup-link" href="${p.website}" target="_blank" rel="noopener">Visit website ↗</a>` : ''}
-    `);
-
     const marker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
       .setLngLat([lng, lat])
-      .setPopup(popup)
       .addTo(map);
 
     el.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isMobile = window.matchMedia('(max-width: 991px)').matches;
-      if (!isMobile) {
-        if (marker.getPopup().isOpen()) {
-          marker.getPopup().remove();
-        } else {
-          markers.forEach(m => m.marker.getPopup().remove());
-          marker.togglePopup();
-        }
-      } else {
-        markers.forEach(m => m.marker.getPopup().remove());
-      }
       openDetail(feature, idx);
       setActiveItem(document.querySelector(`.place-item[data-idx="${idx}"]`));
       scrollSidebarToItem(idx);
@@ -460,7 +433,6 @@ function closeDetail() {
   detailOverlay.classList.remove('open');
   setActiveItem(null);
   setActiveMarker(null);
-  markers.forEach(m => m.marker.getPopup().remove());
 }
 
 detailClose.addEventListener('click', closeDetail);
