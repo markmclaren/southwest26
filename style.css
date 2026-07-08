@@ -69,6 +69,17 @@ body {
   border-color: var(--col-header);
 }
 
+.day-select-wrap {
+  display: none;
+}
+
+.day-select {
+  font-size: 0.84rem;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  color: #374151;
+}
+
 /* ── FILTER BAR ROWS ───────────────────────────────────────── */
 .filter-row { line-height: 1; }
 .filter-divider {
@@ -362,6 +373,22 @@ body {
   .sidebar { max-height: 42vh; border-right: none; border-bottom: 1px solid #e2e8f0; }
   .map-section { height: 55vh; }
   #map { height: 100%; }
+}
+
+@media (max-width: 767px) {
+  .day-filter-row .btn-filter {
+    display: none;
+  }
+
+  .day-filter-row .day-select-wrap {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .day-filter-row .day-select {
+    width: 100%;
+  }
 }
 
 /* ── SCROLLBAR ──────────────────────────────────────────────── */

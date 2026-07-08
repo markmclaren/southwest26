@@ -25,6 +25,12 @@ function formatDate(iso) {
   return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'long' });
 }
 
+function googleMapsDirectionsUrl(feature) {
+  const [lng, lat] = feature.geometry.coordinates;
+  const destination = encodeURIComponent(`${lat},${lng}`);
+  return `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=driving`;
+}
+
 // ── STATE ─────────────────────────────────────────────────────
 let allFeatures  = [];
 let activeDay    = 'all';                                   // 'all' | ISO date string
@@ -53,6 +59,8 @@ fetch(GEOJSON_URL)
     buildCatToggles();
     buildSidebar();
     addMarkers();
+    applyFilters();
+    panToVisibleCentroid();
   })
   .catch(err => console.error('Failed to load places.geojson:', err));
 
@@ -85,13 +93,68 @@ function applyFilters() {
   });
 }
 
+function panToVisibleCentroid() {
+  const day = (activeDay || '').trim();
+  const targets = day === 'all'
+    ? allFeatures.filter(isVisible)
+    : allFeatures.filter(feature => {
+      const p = feature.properties;
+      return activeCats.has(p.category) && (p.date || '').trim() === day;
+    });
+
+  if (!targets.length) return;
+
+  // Popups can auto-pan the map and offset centering; close them before recentering.
+  markers.forEach(({ marker }) => marker.getPopup().remove());
+
+  if (targets.length === 1) {
+    const [lng, lat] = targets[0].geometry.coordinates;
+    map.easeTo({ center: [lng, lat], duration: 700 });
+    return;
+  }
+
+  let lngSum = 0;
+  let latSum = 0;
+
+  targets.forEach(feature => {
+    const [lng, lat] = feature.geometry.coordinates;
+    lngSum += lng;
+    latSum += lat;
+  });
+
+  map.easeTo({
+    center: [lngSum / targets.length, latSum / targets.length],
+    duration: 700,
+  });
+}
+
 // ── DAY FILTERS ───────────────────────────────────────────────
 function buildDayFilters() {
-  const bar = document.getElementById('filterBar').querySelector('.filter-row');
+  const bar = document.getElementById('filterBar').querySelector('.day-filter-row');
+  const daySelect = document.getElementById('daySelect');
 
   const dates = [...new Set(
     allFeatures.map(f => f.properties.date).filter(Boolean)
   )].sort();
+
+  if (daySelect) {
+    daySelect.innerHTML = '';
+
+    const allOption = document.createElement('option');
+    allOption.value = 'all';
+    allOption.textContent = 'All';
+    daySelect.appendChild(allOption);
+
+    dates.forEach(iso => {
+      const option = document.createElement('option');
+      option.value = iso;
+      option.textContent = formatDate(iso);
+      daySelect.appendChild(option);
+    });
+
+    daySelect.value = activeDay;
+    daySelect.addEventListener('change', (e) => setDay(e.target.value));
+  }
 
   dates.forEach(iso => {
     const btn = document.createElement('button');
@@ -111,7 +174,14 @@ function setDay(value) {
   document.querySelectorAll('.btn-filter').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === value);
   });
+
+  const daySelect = document.getElementById('daySelect');
+  if (daySelect && daySelect.value !== value) {
+    daySelect.value = value;
+  }
+
   applyFilters();
+  panToVisibleCentroid();
 }
 
 // ── CATEGORY TOGGLES ─────────────────────────────────────────
@@ -179,6 +249,7 @@ function addMarkers() {
   allFeatures.forEach((feature, idx) => {
     const p = feature.properties;
     const [lng, lat] = feature.geometry.coordinates;
+    const directionsHref = googleMapsDirectionsUrl(feature);
 
     // Outer wrapper — MapLibre anchors this; must NOT be CSS-transformed
     const el = document.createElement('div');
@@ -198,6 +269,7 @@ function addMarkers() {
       <div class="popup-title">${p.title}</div>
       ${p.date ? `<div style="font-size:0.72rem;color:#64748b;margin-bottom:4px">${formatDate(p.date)}</div>` : ''}
       <div class="popup-desc">${p.description}</div>
+      <a class="popup-link" href="${directionsHref}" target="_blank" rel="noopener">Directions in Google Maps ↗</a>
       ${p.website ? `<a class="popup-link" href="${p.website}" target="_blank" rel="noopener">Visit website ↗</a>` : ''}
     `);
 
@@ -249,6 +321,7 @@ const detailClose   = document.getElementById('detailClose');
 function openDetail(feature, idx) {
   const p   = feature.properties;
   const cls = catClass(p.category);
+  const directionsHref = googleMapsDirectionsUrl(feature);
 
   detailBody.innerHTML = `
     <span class="detail-cat-badge ${cls}">${p.category}</span>
@@ -264,6 +337,9 @@ function openDetail(feature, idx) {
         ${p.who}
       </div>` : ''}
     <p class="detail-desc">${p.description}</p>
+    <a class="btn-website" href="${directionsHref}" target="_blank" rel="noopener">
+      <i class="bi bi-map"></i> Directions in Google Maps
+    </a>
     ${p.website ? `
       <a class="btn-website" href="${p.website}" target="_blank" rel="noopener">
         <i class="bi bi-box-arrow-up-right"></i> Visit website
