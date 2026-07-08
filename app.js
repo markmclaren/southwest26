@@ -7,15 +7,15 @@
 
 // ── CONFIG ────────────────────────────────────────────────────
 const GEOJSON_URL = 'places.geojson';
-const MAP_STYLE   = 'https://tiles.openfreemap.org/styles/bright';
-const MAP_CENTER  = [-2.35, 51.35];
-const MAP_ZOOM    = 8.5;
-const DEBUG_PAN   = false;
+const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+const MAP_CENTER = [-2.35, 51.35];
+const MAP_ZOOM = 8.5;
+const DEBUG_PAN = false;
 
 // ── CATEGORY HELPERS ─────────────────────────────────────────
 const CAT_CLASS = {
   'Itinerary Stop': 'stop',
-  'Food Option':    'food',
+  'Food Option': 'food',
 };
 
 function catClass(cat) { return CAT_CLASS[cat] || 'stop'; }
@@ -40,11 +40,11 @@ function debugPan(event, details = {}) {
 }
 
 // ── STATE ─────────────────────────────────────────────────────
-let allFeatures  = [];
-let activeDay    = 'all';                                   // 'all' | ISO date string
-let activeCats   = new Set(['Itinerary Stop', 'Food Option']);
+let allFeatures = [];
+let activeDay = 'all';                                   // 'all' | ISO date string
+let activeCats = new Set(['Itinerary Stop', 'Food Option']);
 let activeMarker = null;
-let markers      = [];
+let markers = [];
 let pendingPanRaf = null;
 
 // ── MAP INIT ─────────────────────────────────────────────────
@@ -89,7 +89,7 @@ fetch(GEOJSON_URL)
 
 // ── VISIBILITY LOGIC ─────────────────────────────────────────
 function isVisible(feature) {
-  const p   = feature.properties;
+  const p = feature.properties;
   const cat = p.category;
   const iso = p.date || null;
 
@@ -105,7 +105,7 @@ function isVisible(feature) {
 function applyFilters() {
   // Sidebar items
   document.querySelectorAll('.place-item').forEach(li => {
-    const idx  = parseInt(li.dataset.idx, 10);
+    const idx = parseInt(li.dataset.idx, 10);
     const show = isVisible(allFeatures[idx]);
     li.classList.toggle('hidden', !show);
   });
@@ -252,9 +252,9 @@ function buildDayFilters() {
 
   dates.forEach(iso => {
     const btn = document.createElement('button');
-    btn.className    = 'btn btn-filter';
+    btn.className = 'btn btn-filter';
     btn.dataset.filter = iso;
-    btn.textContent  = formatDate(iso);
+    btn.textContent = formatDate(iso);
     btn.addEventListener('click', () => setDay(iso, 'button'));
     bar.appendChild(btn);
   });
@@ -307,12 +307,12 @@ function buildSidebar() {
   list.innerHTML = '';
 
   allFeatures.forEach((feature, idx) => {
-    const p  = feature.properties;
+    const p = feature.properties;
     const li = document.createElement('li');
-    li.className      = 'place-item';
-    li.dataset.idx    = idx;
-    li.dataset.date   = p.date || '';
-    li.dataset.cat    = p.category;
+    li.className = 'place-item';
+    li.dataset.idx = idx;
+    li.dataset.date = p.date || '';
+    li.dataset.cat = p.category;
 
     li.innerHTML = `
       <span class="place-dot ${catClass(p.category)}"></span>
@@ -391,37 +391,44 @@ function scrollSidebarToItem(idx) {
 }
 
 // ── DETAIL PANEL ──────────────────────────────────────────────
-const detailPanel   = document.getElementById('detailPanel');
+const detailPanel = document.getElementById('detailPanel');
 const detailOverlay = document.getElementById('detailOverlay');
-const detailBody    = document.getElementById('detailBody');
-const detailClose   = document.getElementById('detailClose');
+const detailBody = document.getElementById('detailBody');
+const detailClose = document.getElementById('detailClose');
 
 function openDetail(feature, idx) {
-  const p   = feature.properties;
+  const p = feature.properties;
   const cls = catClass(p.category);
   const directionsHref = googleMapsDirectionsUrl(feature);
 
   detailBody.innerHTML = `
-    <span class="detail-cat-badge ${cls}">${p.category}</span>
-    <h2>${p.title}</h2>
-    ${p.date ? `
-      <div class="detail-date">
-        <i class="bi bi-calendar3"></i>
-        ${formatDate(p.date)}
+    ${p.image ? `
+      <div class="detail-hero">
+        <img src="${p.image}" alt="${p.title}" loading="lazy"
+             onerror="this.closest('.detail-hero').remove()">
       </div>` : ''}
-    ${p.who ? `
-      <div class="detail-who">
-        <i class="bi bi-people"></i>
-        ${p.who}
-      </div>` : ''}
-    <p class="detail-desc">${p.description}</p>
-    <a class="btn-website" href="${directionsHref}" target="_blank" rel="noopener">
-      <i class="bi bi-map"></i> Directions in Google Maps
-    </a>
-    ${p.website ? `
-      <a class="btn-website" href="${p.website}" target="_blank" rel="noopener">
-        <i class="bi bi-box-arrow-up-right"></i> Visit website
-      </a>` : ''}
+    <div class="detail-content">
+      <span class="detail-cat-badge ${cls}">${p.category}</span>
+      <h2>${p.title}</h2>
+      ${p.date ? `
+        <div class="detail-date">
+          <i class="bi bi-calendar3"></i>
+          ${formatDate(p.date)}
+        </div>` : ''}
+      ${p.who ? `
+        <div class="detail-who">
+          <i class="bi bi-people"></i>
+          ${p.who}
+        </div>` : ''}
+      <p class="detail-desc">${p.description}</p>
+      <a class="btn-website" href="${directionsHref}" target="_blank" rel="noopener">
+        <i class="bi bi-map"></i> Directions in Google Maps
+      </a>
+      ${p.website ? `
+        <a class="btn-website" href="${p.website}" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> Visit website
+        </a>` : ''}
+    </div>
   `;
 
   detailPanel.classList.add('open');
@@ -447,7 +454,7 @@ if (toggleListBtn) {
   toggleListBtn.addEventListener('click', () => {
     const mainRow = document.querySelector('.main-row');
     const isCollapsed = mainRow.classList.toggle('sidebar-collapsed');
-    
+
     // Update button content
     const icon = toggleListBtn.querySelector('i');
     const text = toggleListBtn.querySelector('.btn-text');
@@ -458,7 +465,7 @@ if (toggleListBtn) {
       if (icon) icon.className = 'bi bi-layout-sidebar';
       if (text) text.textContent = 'Hide List';
     }
-    
+
     // Resize map to fit new dimensions
     setTimeout(() => {
       map.resize();

@@ -8,8 +8,9 @@
         "category": "Itinerary Stop",
         "date": "2026-07-28",
         "who": "All",
-        "description": "Arrival day — settle in, welcome dinner. Base for the whole visit.",
-        "website": "https://www.visitclevedon.co.uk/"
+        "description": "Arrival day \u2014 settle in, welcome dinner. Base for the whole visit.",
+        "website": "https://www.visitclevedon.co.uk/",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/bath-bristol/places/clevedon-court/library/spring/1633818.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -32,7 +33,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.2290,
+          -2.229,
           51.4934
         ]
       }
@@ -44,8 +45,9 @@
         "category": "Itinerary Stop",
         "date": "2026-07-29",
         "who": "4 adults + Amelia",
-        "description": "Historic National Trust abbey and village — a Harry Potter filming location, a must for Amelia!",
-        "website": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village"
+        "description": "Historic National Trust abbey and village \u2014 a Harry Potter filming location, a must for Amelia!",
+        "website": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/wiltshire/places/lacock/library/summer/1742375.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -98,8 +100,9 @@
         "category": "Itinerary Stop",
         "date": "2026-07-30",
         "who": "4 adults + Amelia",
-        "description": "Ruins of the original Salisbury — an Iron Age hill fort, Roman settlement and Norman castle.",
-        "website": "https://www.english-heritage.org.uk/visit/places/old-sarum/"
+        "description": "Ruins of the original Salisbury \u2014 an Iron Age hill fort, Roman settlement and Norman castle.",
+        "website": "https://www.english-heritage.org.uk/visit/places/old-sarum/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/old-sarum/old-sarum-aerial-shutterstock.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
@@ -123,7 +126,7 @@
         "type": "Point",
         "coordinates": [
           -1.7973,
-          51.0650
+          51.065
         ]
       }
     },
@@ -134,8 +137,9 @@
         "category": "Itinerary Stop",
         "date": "2026-07-30",
         "who": "4 adults + Amelia",
-        "description": "Historic stone circle — one of the world's most famous prehistoric monuments.",
-        "website": "https://www.english-heritage.org.uk/visit/places/stonehenge/"
+        "description": "Historic stone circle \u2014 one of the world's most famous prehistoric monuments.",
+        "website": "https://www.english-heritage.org.uk/visit/places/stonehenge/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/stonehenge/solstice-banner.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
@@ -153,7 +157,8 @@
         "date": "2026-07-31",
         "who": "Full group inc. Al & Frank",
         "description": "Impressive medieval castle in the Wye Valley, English Heritage.",
-        "website": "https://www.english-heritage.org.uk/visit/places/goodrich-castle/"
+        "website": "https://www.english-heritage.org.uk/visit/places/goodrich-castle/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/goodrich-castle/goodrich-23_web-banner-still.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
@@ -195,7 +200,7 @@
         "type": "Point",
         "coordinates": [
           -2.6469,
-          51.6530
+          51.653
         ]
       }
     },
@@ -206,8 +211,9 @@
         "category": "Itinerary Stop",
         "date": "2026-07-31",
         "who": "Full group inc. Al & Frank",
-        "description": "Spectacular ruined Cistercian abbey in the Wye Valley — boys arrive ~10am and join here.",
-        "website": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey"
+        "description": "Spectacular ruined Cistercian abbey in the Wye Valley \u2014 boys arrive ~10am and join here.",
+        "website": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey",
+        "image": "https://cadw.gov.wales/sites/default/files/styles/promo/public/2019-05/SVW-C29-1314-0066.JPG?h=6103f89c&itok=l6cpm250"
       },
       "geometry": {
         "type": "Point",
@@ -224,8 +230,9 @@
         "category": "Itinerary Stop",
         "date": "2026-08-01",
         "who": "Full group inc. Al & Frank",
-        "description": "Dramatic limestone gorge and cliff walks — afternoon visit.",
-        "website": "https://www.cheddargorge.co.uk/"
+        "description": "Dramatic limestone gorge and cliff walks \u2014 afternoon visit.",
+        "website": "https://www.cheddargorge.co.uk/",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/cheddar-gorge/library/summer/cheddar-gorge-somerset-1334813.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -242,7 +249,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-01",
         "who": "Full group inc. Al & Frank",
-        "description": "Scenic reservoir walk — morning plans with the full group.",
+        "description": "Scenic reservoir walk \u2014 morning plans with the full group.",
         "website": "https://www.bristolwater.co.uk/chew-valley-lake/"
       },
       "geometry": {
@@ -267,7 +274,7 @@
         "type": "Point",
         "coordinates": [
           -2.6067,
-          51.3490
+          51.349
         ]
       }
     },
@@ -296,7 +303,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-02",
         "who": "Fabio, Silvia & Amelia (afternoon)",
-        "description": "Possible afternoon in the Cotswolds — the 'Venice of the Cotswolds' with its low bridges over the River Windrush.",
+        "description": "Possible afternoon in the Cotswolds \u2014 the 'Venice of the Cotswolds' with its low bridges over the River Windrush.",
         "website": "https://www.bourtoninfo.com/"
       },
       "geometry": {
@@ -320,7 +327,7 @@
         "type": "Point",
         "coordinates": [
           -1.9271,
-          51.9610
+          51.961
         ]
       }
     },
@@ -330,9 +337,10 @@
         "title": "Witley Court & Gardens",
         "category": "Itinerary Stop",
         "date": "2026-08-02",
-        "who": "Full group — boys depart via Droitwich",
+        "who": "Full group \u2014 boys depart via Droitwich",
         "description": "Spectacular ruined English Heritage mansion with dramatic fountains and formal gardens in Worcestershire. Boys dropped off in Droitwich on the way.",
-        "website": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"
+        "website": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/witley-court/witley-banner-ext.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
@@ -349,7 +357,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-03",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Magnificent 850-acre estate on the edge of Bristol — great for a walk with panoramic city views.",
+        "description": "Magnificent 850-acre estate on the edge of Bristol \u2014 great for a walk with panoramic city views.",
         "website": "https://www.bristol.gov.uk/museums-parks-sports-culture/ashton-court-estate"
       },
       "geometry": {
@@ -367,7 +375,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-03",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Bristol and shopping — Cabot Circus, harbourside, and the city's vibrant food and culture scene.",
+        "description": "Bristol and shopping \u2014 Cabot Circus, harbourside, and the city's vibrant food and culture scene.",
         "website": "https://www.visitbristol.co.uk/"
       },
       "geometry": {
@@ -385,8 +393,9 @@
         "category": "Itinerary Stop",
         "date": "2026-08-04",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Beautiful market town — visit the medieval Tithe Barn and the Saxon Church of St Laurence.",
-        "website": "https://www.bradfordonavon.co.uk/"
+        "description": "Beautiful market town \u2014 visit the medieval Tithe Barn and the Saxon Church of St Laurence.",
+        "website": "https://www.bradfordonavon.co.uk/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/bradford-on-avon-tithe-barn/bradford-tithe-barn-hero.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
@@ -404,12 +413,13 @@
         "date": "2026-08-04",
         "who": "Adults only (Amelia at summer school)",
         "description": "Ruined 14th-century castle with a fascinating chapel containing medieval wall paintings and tombs.",
-        "website": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/"
+        "website": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/",
+        "image": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/farleigh-hungerford/farleigh_banner-jan24.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.2870,
+          -2.287,
           51.3175
         ]
       }
@@ -439,7 +449,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-05",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Popular designer outlet village in Street, Somerset — great for shopping.",
+        "description": "Popular designer outlet village in Street, Somerset \u2014 great for shopping.",
         "website": "https://www.clarksvillage.co.uk/"
       },
       "geometry": {
@@ -457,8 +467,9 @@
         "category": "Itinerary Stop",
         "date": "2026-08-05",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Iconic hill and St Michael's tower — a legendary Somerset landmark with panoramic views.",
-        "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor"
+        "description": "Iconic hill and St Michael's tower \u2014 a legendary Somerset landmark with panoramic views.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/glastonbury-tor/library/st-michaels-tower-glastonbury-tor-somerset-1362928.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -481,7 +492,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.5230,
+          -2.523,
           51.0366
         ]
       }
@@ -530,7 +541,8 @@
         "date": "2026-08-06",
         "who": "Adults only (Amelia at summer school)",
         "description": "Picturesque medieval village and National Trust castle on the edge of Exmoor.",
-        "website": "https://www.nationaltrust.org.uk/visit/somerset/dunster-castle-and-watermill"
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/dunster-castle-and-watermill",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/dunster-castle-and-watermill/library/autumn/exterior-dunster-castle-somerset-1364017.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -547,13 +559,13 @@
         "category": "Itinerary Stop",
         "date": "2026-08-06",
         "who": "Adults only (Amelia at summer school)",
-        "description": "Beautiful moorland national park — dramatic coastal scenery and wild ponies.",
+        "description": "Beautiful moorland national park \u2014 dramatic coastal scenery and wild ponies.",
         "website": "https://www.exmoor-nationalpark.gov.uk/"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.6040,
+          -3.604,
           51.1338
         ]
       }
@@ -602,12 +614,13 @@
         "date": "2026-08-07",
         "who": "Fabio and Silvia only",
         "description": "Magnificent Elizabethan National Trust mansion in Somerset with formal gardens.",
-        "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house"
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house",
+        "image": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/montacute-house/library/summer/1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.7140,
+          -2.714,
           50.9517
         ]
       }
@@ -619,14 +632,14 @@
         "category": "Itinerary Stop",
         "date": "2026-08-10",
         "who": "4 adults + Amelia",
-        "description": "Final days trip to Oxford — the dreaming spires, university colleges, and the Bodleian Library.",
+        "description": "Final days trip to Oxford \u2014 the dreaming spires, university colleges, and the Bodleian Library.",
         "website": "https://www.experienceoxfordshire.org/"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -1.2578,
-          51.7520
+          51.752
         ]
       }
     }
