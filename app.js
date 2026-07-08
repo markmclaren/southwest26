@@ -10,7 +10,7 @@ const GEOJSON_URL = 'places.geojson';
 const MAP_STYLE   = 'https://tiles.openfreemap.org/styles/bright';
 const MAP_CENTER  = [-2.35, 51.35];
 const MAP_ZOOM    = 8.5;
-const DEBUG_PAN   = true;
+const DEBUG_PAN   = false;
 
 // ── CATEGORY HELPERS ─────────────────────────────────────────
 const CAT_CLASS = {
@@ -81,7 +81,13 @@ fetch(GEOJSON_URL)
     buildSidebar();
     addMarkers();
     applyFilters();
-    schedulePanToVisibleCentroid('initial-load');
+
+    // Ensure the default "All" view fits visible markers on first paint.
+    if (map.loaded()) {
+      schedulePanToVisibleCentroid('initial-load');
+    } else {
+      map.once('load', () => schedulePanToVisibleCentroid('initial-load'));
+    }
   })
   .catch(err => console.error('Failed to load places.geojson:', err));
 
@@ -159,11 +165,8 @@ function computeCentroid(features) {
 function panToVisibleCentroid() {
   const day = (activeDay || '').trim();
   const targets = day === 'all'
-    ? allFeatures.filter(isVisible)
-    : allFeatures.filter(feature => {
-      const p = feature.properties;
-      return activeCats.has(p.category) && (p.date || '').trim() === day;
-    });
+    ? allFeatures.filter(feature => activeCats.has(feature.properties.category))
+    : allFeatures.filter(isVisible);
 
   debugPan('panToVisibleCentroid:targets', {
     day,
@@ -189,20 +192,26 @@ function panToVisibleCentroid() {
       destination: [lng, lat],
       title: targets[0].properties.title,
     });
-    map.easeTo({ center: [lng, lat], duration: 700 });
+    map.easeTo({ center: [lng, lat], zoom: Math.max(map.getZoom(), 12), duration: 700 });
     return;
   }
 
-  const centroid = computeCentroid(targets);
-  const [centroidLng, centroidLat] = centroid.coordinates;
+  const bounds = new maplibregl.LngLatBounds();
+  targets.forEach(feature => bounds.extend(feature.geometry.coordinates));
 
-  map.easeTo({
-    center: [centroidLng, centroidLat],
+  const isMobile = window.matchMedia('(max-width: 991px)').matches;
+  const padding = isMobile
+    ? { top: 88, right: 28, bottom: 28, left: 28 }
+    : { top: 120, right: 72, bottom: 72, left: 72 };
+
+  map.fitBounds(bounds, {
+    padding,
     duration: 700,
+    maxZoom: 12,
   });
-  debugPan('panToVisibleCentroid:centroid', {
-    method: centroid.method,
-    destination: [centroidLng, centroidLat],
+  debugPan('panToVisibleCentroid:fitBounds', {
+    count: targets.length,
+    bounds: bounds.toArray(),
   });
 }
 
