@@ -21,19 +21,28 @@ body {
 
 /* ── HEADER ─────────────────────────────────────────────────── */
 .site-header {
-  background: var(--col-header);
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.25)),
+    url('images/pier.jpg') center 42% / cover no-repeat;
   color: #fff;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+}
+.header-copy {
+  max-width: 44rem;
 }
 .site-header h1 {
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
   letter-spacing: 0.01em;
+  text-shadow: 0 2px 10px rgba(15, 23, 42, 0.45);
 }
 .site-header .subtitle {
-  font-size: 0.9rem;
-  opacity: 0.75;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  text-shadow: 0 2px 8px rgba(15, 23, 42, 0.45);
 }
-.header-flag { font-size: 2rem; line-height: 1; }
 
 /* ── FILTER BAR ─────────────────────────────────────────────── */
 .filter-bar {
@@ -234,6 +243,12 @@ body {
 .place-cat {
   color: #94a3b8;
 }
+.place-heritage {
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
 
 /* ── MAP ────────────────────────────────────────────────────── */
 .map-section {
@@ -393,6 +408,14 @@ body {
   align-items: center;
   gap: 5px;
 }
+.detail-body .detail-heritage {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .detail-body .detail-desc {
   font-size: 0.9rem;
   line-height: 1.6;
@@ -418,15 +441,15 @@ body {
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 991px) {
   :root {
-    --header-h: 56px;
+    --header-h: 110px;
     --filter-h: 88px;
   }
   .site-header {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-  .header-flag {
-    font-size: 1.5rem;
+    min-height: 110px;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    background-position: center 40%;
+    background-size: cover;
   }
   .site-header h1 {
     font-size: 1.15rem;
@@ -454,6 +477,17 @@ body {
     height: auto;
   }
   #map { height: 100%; }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --header-h: 90px;
+  }
+
+  .site-header {
+    min-height: 90px;
+    background-position: center 50%;
+  }
 }
 
 @media (max-width: 767px) {

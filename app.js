@@ -321,6 +321,7 @@ function buildSidebar() {
         <div class="place-meta">
           ${p.date ? `<span class="place-date">${formatDate(p.date)}</span>` : ''}
           <span class="place-cat">${p.category}</span>
+          ${p.heritage_organization ? `<span class="place-heritage">${p.heritage_organization}</span>` : ''}
         </div>
       </div>
     `;
@@ -419,6 +420,11 @@ function openDetail(feature, idx) {
         <div class="detail-who">
           <i class="bi bi-people"></i>
           ${p.who}
+        </div>` : ''}
+      ${p.heritage_organization ? `
+        <div class="detail-heritage">
+          <i class="bi bi-bank"></i>
+          ${p.heritage_organization}
         </div>` : ''}
       <p class="detail-desc">${p.description}</p>
       <a class="btn-website" href="${directionsHref}" target="_blank" rel="noopener">
