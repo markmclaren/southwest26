@@ -391,6 +391,21 @@ function scrollSidebarToItem(idx) {
   if (li) li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
+function detailHeroMarkup(p) {
+  const src = p.image || p.image_backup;
+  if (!src) return '';
+
+  const fallbackAttr = p.image_backup && p.image && p.image !== p.image_backup
+    ? ` data-fallback="${p.image_backup}"`
+    : '';
+
+  return `
+      <div class="detail-hero">
+        <img src="${src}" alt="${p.title}" loading="lazy"${fallbackAttr}
+             onerror="if (this.dataset.fallback && this.src !== this.dataset.fallback) { this.src = this.dataset.fallback; this.dataset.fallback = ''; } else { this.closest('.detail-hero').remove(); }">
+      </div>`;
+}
+
 // ── DETAIL PANEL ──────────────────────────────────────────────
 const detailPanel = document.getElementById('detailPanel');
 const detailOverlay = document.getElementById('detailOverlay');
@@ -403,11 +418,7 @@ function openDetail(feature, idx) {
   const directionsHref = googleMapsDirectionsUrl(feature);
 
   detailBody.innerHTML = `
-    ${p.image ? `
-      <div class="detail-hero">
-        <img src="${p.image}" alt="${p.title}" loading="lazy"
-             onerror="this.closest('.detail-hero').remove()">
-      </div>` : ''}
+    ${detailHeroMarkup(p)}
     <div class="detail-content">
       <span class="detail-cat-badge ${cls}">${p.category}</span>
       <h2>${p.title}</h2>
