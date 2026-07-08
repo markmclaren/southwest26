@@ -35,12 +35,8 @@ function googleMapsDirectionsUrl(feature) {
 function debugPan(event, details = {}) {
   if (!DEBUG_PAN) return;
   const center = map.getCenter();
-  console.log('[PAN_DEBUG]', event, {
-    activeDay,
-    center: [Number(center.lng.toFixed(6)), Number(center.lat.toFixed(6))],
-    zoom: Number(map.getZoom().toFixed(3)),
-    ...details,
-  });
+  const msg = `[PAN_DEBUG] ${event} | activeDay: ${activeDay} | center: [${center.lng.toFixed(6)}, ${center.lat.toFixed(6)}] | zoom: ${map.getZoom().toFixed(3)} | details: ${JSON.stringify(details)}`;
+  console.log(msg);
 }
 
 // ── STATE ─────────────────────────────────────────────────────
