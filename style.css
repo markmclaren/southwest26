@@ -4,16 +4,18 @@
   --col-food:   #16a34a;   /* green – Food Option     */
   --col-header: #1e3a5f;
   --col-filter: #f0f4f8;
+  --col-gold:   #c9a84c;   /* gold accent             */
   --sidebar-w:  360px;
-  --header-h:   160px;     /* desktop hero height    */
+  --header-h:   180px;     /* desktop hero height    */
   --filter-h:   96px;
 }
 
 /* ── RESET / BASE ───────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* 1. Premium typeface: Inter for UI, Playfair Display for headings */
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
   background: #f8fafc;
   color: #1e293b;
   margin: 0;
@@ -21,35 +23,25 @@ body {
 
 /* ── HEADER ─────────────────────────────────────────────────── */
 .site-header {
+  /* 2. Bottom-fade: image dissolves into the white filter bar */
   background:
     linear-gradient(to bottom,
-      rgba(10, 20, 40, 0.45) 0%,
-      rgba(10, 20, 40, 0.30) 100%),
+      rgba(10, 20, 40, 0.42) 0%,
+      rgba(10, 20, 40, 0.25) 55%,
+      rgba(255, 255, 255, 0.88) 100%),
     url('images/pier.jpg') center 55% / cover no-repeat;
   color: #fff;
   height: var(--header-h);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 2rem;
+  padding-top: calc((var(--header-h) - 90px) / 2);
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle bottom edge shimmer */
-.site-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(255,255,255,0.25) 30%,
-    rgba(255,255,255,0.55) 50%,
-    rgba(255,255,255,0.25) 70%,
-    transparent 100%);
-}
+/* No hard shimmer line — the bottom fade handles the transition */
+.site-header::after { display: none; }
 
 .header-inner {
   width: 100%;
@@ -86,45 +78,61 @@ body {
   min-width: 0;
 }
 
+/* 1. Playfair Display for the hero heading */
 .site-header h1 {
-  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.35rem, 2.5vw, 2.1rem);
   font-weight: 700;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 12px rgba(10, 20, 40, 0.6);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.2;
-  margin-bottom: 0.2rem !important;
+  line-height: 1.15;
+  margin-bottom: 0 !important;
 }
 
+/* 3. Gold accent rule under the title */
+.title-rule {
+  display: block;
+  width: 2.6rem;
+  height: 2px;
+  background: var(--col-gold);
+  border-radius: 2px;
+  margin: 0.3rem 0 0.28rem;
+}
+
+/* 4. Uppercase tracked subtitle */
 .site-header .subtitle {
-  font-size: clamp(0.72rem, 1.2vw, 0.88rem);
-  opacity: 0.9;
-  text-shadow: 0 1px 6px rgba(10, 20, 40, 0.5);
+  font-size: clamp(0.62rem, 1vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .subtitle-dot {
   display: inline-block;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.6);
   flex-shrink: 0;
 }
 
 .subtitle-trip {
   font-weight: 500;
-  letter-spacing: 0.02em;
 }
 
 .subtitle-season {
   font-weight: 400;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .header-badge {
@@ -132,38 +140,45 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.38);
   border-radius: 999px;
-  padding: 0.3rem 0.85rem;
-  font-size: 0.78rem;
+  padding: 0.35rem 1rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   white-space: nowrap;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.2);
 }
 
 /* ── FILTER BAR ─────────────────────────────────────────────── */
+/* 5. White filter bar with subtle shadow instead of grey + hard border */
 .filter-bar {
-  background: var(--col-filter);
-  border-bottom: 1px solid #d1d5db;
+  background: #fff;
+  border-bottom: none;
+  box-shadow: 0 1px 0 #e2e8f0, 0 2px 8px rgba(0,0,0,0.04);
   z-index: 100;
   min-height: var(--filter-h);
 }
 .filter-label {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #64748b;
+  color: #94a3b8;
   white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .btn-filter {
   font-size: 0.78rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 999px;
-  border: 1.5px solid #cbd5e1;
-  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
   color: #374151;
+  font-weight: 500;
   transition: all 0.15s;
   white-space: nowrap;
 }
@@ -193,7 +208,7 @@ body {
 .filter-row { line-height: 1; }
 .filter-divider {
   height: 1px;
-  background: #d1d5db;
+  background: #e9edf2;
   margin: 0 -1.5rem;
 }
 
@@ -295,18 +310,30 @@ body {
 .dot-food  { background: var(--col-food);  }
 
 /* Place list */
+/* 6. Left-border accent on hover/active for a premium app-like feel */
 .place-list { }
 .place-item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 10px 14px;
+  padding: 11px 14px 11px 13px;
   border-bottom: 1px solid #f1f5f9;
+  border-left: 3px solid transparent;
   cursor: pointer;
-  transition: background 0.12s;
+  transition: background 0.12s, border-color 0.12s;
 }
-.place-item:hover { background: #f0f6ff; }
-.place-item.active { background: #e0eeff; }
+.place-item:hover {
+  background: #f0f6ff;
+  border-left-color: rgba(37,99,235,0.35);
+}
+.place-item.active {
+  background: #e8f0fe;
+  border-left-color: var(--col-stop);
+}
+.place-item.active.food-item {
+  background: #e8f5ec;
+  border-left-color: var(--col-food);
+}
 .place-item.hidden { display: none; }
 
 .place-dot {
@@ -542,11 +569,12 @@ body {
 /* ─ Desktop (992px+) ───────────────────────────────────── */
 @media (min-width: 992px) {
   :root {
-    --header-h: 160px;
+    --header-h: 180px;
   }
   .site-header {
     background-position: center 55%;
     padding: 0 3rem;
+    padding-top: calc((180px - 90px) / 2);
   }
   .header-icon {
     width: 52px;
