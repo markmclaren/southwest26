@@ -1,0 +1,409 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hayles Fruit Farm",
+        "category": "Food Option",
+        "description": "Family-run fruit farm with an excellent cafe and farm shop. Great quality English breakfasts and lunches.",
+        "website": "https://www.haylesfruitfarm.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.9271, 51.9610] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "White Row Farm",
+        "category": "Food Option",
+        "description": "Top-tier local produce, farm shop, deli, and fantastic fish and chips with generous portions.",
+        "website": "https://www.whiterowfarm.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2847, 51.2638] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Clevedon (Home Base)",
+        "category": "Itinerary Stop",
+        "date": "2026-07-28",
+        "who": "All",
+        "description": "Arrival day — settle in, welcome dinner. Base for the whole visit.",
+        "website": "https://www.visitclevedon.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.8527, 51.4361] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lacock Abbey & Village",
+        "category": "Itinerary Stop",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Historic National Trust abbey and village — a Harry Potter filming location, a must for Amelia!",
+        "website": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.1169, 51.4148] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Castle Combe",
+        "category": "Itinerary Stop",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Quintessential Cotswolds village walk.",
+        "website": "https://www.castlecombe.com/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2290, 51.4934] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lowden Garden Centre & Farm Shop",
+        "category": "Food Option",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Superb farm shop and bustling cafe serving high-quality traditional British lunches near Lacock.",
+        "website": "http://www.lowdengardencentre.com/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.1675, 51.3915] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Bridge Tea Rooms",
+        "category": "Food Option",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Atmospheric 1675 tea room in Bradford-on-Avon serving classic cream teas and regional savouries.",
+        "website": "https://www.thebridgetearooms.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2505, 51.3473] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stonehenge",
+        "category": "Itinerary Stop",
+        "date": "2026-07-30",
+        "who": "4 adults + Amelia",
+        "description": "Historic stone circle — one of the world's most famous prehistoric monuments.",
+        "website": "https://www.english-heritage.org.uk/visit/places/stonehenge/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.8262, 51.1789] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Old Sarum",
+        "category": "Itinerary Stop",
+        "date": "2026-07-30",
+        "who": "4 adults + Amelia",
+        "description": "Ruins of the original Salisbury — an Iron Age hill fort, Roman settlement and Norman castle.",
+        "website": "https://www.english-heritage.org.uk/visit/places/old-sarum/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.8047, 51.0934] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Salisbury Cathedral",
+        "category": "Itinerary Stop",
+        "date": "2026-07-30",
+        "who": "4 adults + Amelia",
+        "description": "Magnificent medieval cathedral, home to the best-preserved original copy of the Magna Carta.",
+        "website": "https://www.salisburycathedral.org.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.7973, 51.0650] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Tintern Abbey",
+        "category": "Itinerary Stop",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Spectacular ruined Cistercian abbey in the Wye Valley — boys arrive ~10am and join here.",
+        "website": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6767, 51.6971] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Goodrich Castle",
+        "category": "Itinerary Stop",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Impressive medieval castle in the Wye Valley, English Heritage.",
+        "website": "https://www.english-heritage.org.uk/visit/places/goodrich-castle/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6155, 51.8768] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Tidenham Chase (Meet Point)",
+        "category": "Itinerary Stop",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Car park meeting point on the B4228 in the Wye Valley for the full group to join up.",
+        "website": ""
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6469, 51.6530] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Chew Valley Lake",
+        "category": "Itinerary Stop",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Scenic reservoir walk — morning plans with the full group.",
+        "website": "https://www.bristolwater.co.uk/chew-valley-lake/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6175, 51.3359] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Salt & Malt (Chew Valley)",
+        "category": "Food Option",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Excellent, sustainable, fully gluten-free fish and chips right on the lakeside.",
+        "website": "https://saltandmalt.co.uk/chew-valley/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6067, 51.3490] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cheddar Gorge",
+        "category": "Itinerary Stop",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Dramatic limestone gorge and cliff walks — afternoon visit.",
+        "website": "https://www.cheddargorge.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7597, 51.2854] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Cheddar Gorge Cheese Company",
+        "category": "Food Option",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Authentic traditional cheddar cheese production and shop in the village.",
+        "website": "https://www.cheddaronline.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7763, 51.2783] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Witley Court & Gardens",
+        "category": "Itinerary Stop",
+        "date": "2026-08-02",
+        "who": "Full group — boys depart via Droitwich",
+        "description": "Spectacular ruined English Heritage mansion with dramatic fountains and formal gardens in Worcestershire. Boys dropped off in Droitwich on the way.",
+        "website": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.3395, 52.2822] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bourton-on-the-Water",
+        "category": "Itinerary Stop",
+        "date": "2026-08-02",
+        "who": "Fabio, Silvia & Amelia (afternoon)",
+        "description": "Possible afternoon in the Cotswolds — the 'Venice of the Cotswolds' with its low bridges over the River Windrush.",
+        "website": "https://www.bourtoninfo.com/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.7573, 51.8841] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bristol City Centre",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Bristol and shopping — Cabot Circus, harbourside, and the city's vibrant food and culture scene.",
+        "website": "https://www.visitbristol.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.5854, 51.4584] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ashton Court Estate",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Magnificent 850-acre estate on the edge of Bristol — great for a walk with panoramic city views.",
+        "website": "https://www.bristol.gov.uk/museums-parks-sports-culture/ashton-court-estate"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6438, 51.4461] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bradford on Avon",
+        "category": "Itinerary Stop",
+        "date": "2026-08-04",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Beautiful market town — visit the medieval Tithe Barn and the Saxon Church of St Laurence.",
+        "website": "https://www.bradfordonavon.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2504, 51.3467] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Farleigh Hungerford Castle",
+        "category": "Itinerary Stop",
+        "date": "2026-08-04",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Ruined 14th-century castle with a fascinating chapel containing medieval wall paintings and tombs.",
+        "website": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2870, 51.3175] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Wells Cathedral",
+        "category": "Itinerary Stop",
+        "date": "2026-08-05",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "England's smallest city with a stunning medieval cathedral and Bishop's Palace moat.",
+        "website": "https://www.wellscathedral.org.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6445, 51.2103] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Bishop's Table",
+        "category": "Food Option",
+        "date": "2026-08-05",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Award-winning cafe next to the Bishop's Palace moat serving local Somerset savory tarts.",
+        "website": "https://bishopspalace.org.uk/visit/bishops-table-cafe/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6436, 51.2086] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Glastonbury Tor",
+        "category": "Itinerary Stop",
+        "date": "2026-08-05",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Iconic hill and St Michael's tower — a legendary Somerset landmark with panoramic views.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6987, 51.1447] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Clarke's Village (Outlet)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-05",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Popular designer outlet village in Street, Somerset — great for shopping.",
+        "website": "https://www.clarksvillage.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7399, 51.1285] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "TEALS",
+        "category": "Food Option",
+        "date": "2026-08-05",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Vibrant, modern farm shop and restaurant along the A303 focused on West Country producers.",
+        "website": "https://teals.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.5230, 51.0366] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Dunster Castle & Village",
+        "category": "Itinerary Stop",
+        "date": "2026-08-06",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Picturesque medieval village and National Trust castle on the edge of Exmoor.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/dunster-castle-and-watermill"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.4437, 51.1817] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Exmoor National Park",
+        "category": "Itinerary Stop",
+        "date": "2026-08-06",
+        "who": "Adults only (Amelia at summer school)",
+        "description": "Beautiful moorland national park — dramatic coastal scenery and wild ponies.",
+        "website": "https://www.exmoor-nationalpark.gov.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.6040, 51.1338] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Montacute House",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia only",
+        "description": "Magnificent Elizabethan National Trust mansion in Somerset with formal gardens.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7140, 50.9517] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Kimbers' Farm Shop & Kitchen",
+        "category": "Food Option",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia only",
+        "description": "Traditional family-run farm shop and kitchen serving great Somerset ploughman's lunches.",
+        "website": "https://www.kimbersfarmshop.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.3785, 51.0768] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bristol Balloon Fiesta Nightglow",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "4 adults + Amelia",
+        "description": "The spectacular evening Nightglow event at the Bristol International Balloon Fiesta, Ashton Court Estate.",
+        "website": "https://www.bristolballoonfiesta.co.uk/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6438, 51.4461] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Oxford",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Final days trip to Oxford — the dreaming spires, university colleges, and the Bodleian Library.",
+        "website": "https://www.experienceoxfordshire.org/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2578, 51.7520] }
+    }
+  ]
+}
