@@ -5,7 +5,7 @@
   --col-header: #1e3a5f;
   --col-filter: #f0f4f8;
   --sidebar-w:  360px;
-  --header-h:   72px;
+  --header-h:   160px;     /* desktop hero height    */
   --filter-h:   96px;
 }
 
@@ -22,26 +22,127 @@ body {
 /* ── HEADER ─────────────────────────────────────────────────── */
 .site-header {
   background:
-    linear-gradient(90deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.25)),
+    linear-gradient(105deg,
+      rgba(10, 20, 40, 0.82) 0%,
+      rgba(10, 20, 40, 0.55) 55%,
+      rgba(10, 20, 40, 0.20) 100%),
     url('images/pier.jpg') center 42% / cover no-repeat;
   color: #fff;
-  min-height: 220px;
+  height: var(--header-h);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
 }
-.header-copy {
-  max-width: 44rem;
+
+/* Subtle bottom edge shimmer */
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.25) 30%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0.25) 70%,
+    transparent 100%);
 }
+
+.header-inner {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.header-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.header-text {
+  min-width: 0;
+}
+
 .site-header h1 {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
   font-weight: 700;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 10px rgba(15, 23, 42, 0.45);
+  text-shadow: 0 2px 12px rgba(10, 20, 40, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  margin-bottom: 0.2rem !important;
 }
+
 .site-header .subtitle {
-  font-size: 0.95rem;
+  font-size: clamp(0.72rem, 1.2vw, 0.88rem);
   opacity: 0.9;
-  text-shadow: 0 2px 8px rgba(15, 23, 42, 0.45);
+  text-shadow: 0 1px 6px rgba(10, 20, 40, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subtitle-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.65);
+  flex-shrink: 0;
+}
+
+.subtitle-trip {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.subtitle-season {
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.header-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
 /* ── FILTER BAR ─────────────────────────────────────────────── */
@@ -439,24 +540,34 @@ body {
 .detail-body .btn-website:hover { background: #2563eb; color: #fff; }
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
+/* ─ Desktop (992px+) ───────────────────────────────────── */
+@media (min-width: 992px) {
+  :root {
+    --header-h: 160px;
+  }
+  .site-header {
+    background-position: center 42%;
+    padding: 0 3rem;
+  }
+  .header-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+  }
+}
+
+/* ─ Tablet / Mobile (<992px) ──────────────────────────── */
 @media (max-width: 991px) {
   :root {
-    --header-h: 110px;
+    --header-h: 80px;
     --filter-h: 88px;
   }
   .site-header {
-    min-height: 110px;
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important;
-    background-position: center 40%;
-    background-size: cover;
+    padding: 0 1rem;
+    background-position: center 38%;
   }
-  .site-header h1 {
-    font-size: 1.15rem;
-    line-height: 1.2;
-  }
-  .site-header .subtitle {
-    font-size: 0.75rem;
+  .header-badge {
+    display: none;
   }
   .filter-bar {
     min-height: auto;
@@ -479,17 +590,16 @@ body {
   #map { height: 100%; }
 }
 
-@media (min-width: 992px) {
-  :root {
-    --header-h: 90px;
-  }
-
-  .site-header {
-    min-height: 90px;
-    background-position: center 50%;
+/* ─ Small mobile (<480px) ─────────────────────────────── */
+@media (max-width: 480px) {
+  .header-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
   }
 }
 
+/* ─ Day-filter dropdown on small screens ───────────────────── */
 @media (max-width: 767px) {
   .day-filter-row .btn-filter {
     display: none;
