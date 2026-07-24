@@ -8,7 +8,7 @@
         "category": "Itinerary Stop",
         "date": "2026-07-28",
         "who": "All",
-        "description": "Arrival day — settle in, welcome dinner. Base for the whole visit.",
+        "description": "Arrival day — settle in, welcome dinner at the Royal Oak in Portishead. Base for the whole visit.",
         "website": "https://www.visitclevedon.co.uk/",
         "image": "images/places/01-clevedon-home-base__1633818.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/bath-bristol/places/clevedon-court/library/spring/1633818.jpg"
@@ -59,6 +59,46 @@
         "coordinates": [
           -2.1169,
           51.4148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lowden Garden Centre & Farm Shop",
+        "category": "Food Option",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Superb farm shop and bustling cafe serving high-quality traditional British lunches near Lacock.",
+        "website": "http://www.lowdengardencentre.com/",
+        "image": "images/places/04-lowden-garden-centre-and-farm-shop__farmshop-produce.jpg",
+        "image_backup": "https://www.lowdengardencentre.com/wp-content/uploads/images/farmshop-produce.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1675,
+          51.3915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Bridge Tea Rooms",
+        "category": "Food Option",
+        "date": "2026-07-29",
+        "who": "4 adults + Amelia",
+        "description": "Atmospheric 1675 tea room in Bradford-on-Avon serving classic cream teas and regional savouries.",
+        "website": "https://www.thebridgetearooms.co.uk/",
+        "image": "images/places/05-the-bridge-tea-rooms__49448661528_362461fa45_b-1.jpg",
+        "image_backup": "https://www.thebridgetearooms.co.uk/wp-content/uploads/2022/02/49448661528_362461fa45_b-1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2505,
+          51.3473
         ]
       }
     },
@@ -230,6 +270,46 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Salt & Malt (Chew Valley)",
+        "category": "Food Option",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Excellent, sustainable, fully gluten-free fish and chips right on the lakeside.",
+        "website": "https://saltandmalt.co.uk/chew-valley/",
+        "image": "images/places/15-salt-and-malt-chew-valley__friedfishonthepass-1200x800.jpg",
+        "image_backup": "https://saltandmalt.co.uk/wp-content/uploads/2019/10/friedfishonthepass-1200x800.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6067,
+          51.349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Cheddar Gorge Cheese Company",
+        "category": "Food Option",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Authentic traditional cheddar cheese production and shop in the village.",
+        "website": "https://www.cheddaronline.co.uk/",
+        "image": "images/places/16-the-cheddar-gorge-cheese-company__Cheddar-Gorge-Cheese-29-scaled-2.jpg",
+        "image_backup": "https://www.cheddargorgecheese.com/wp-content/uploads/2023/11/Cheddar-Gorge-Cheese-29-scaled-2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7763,
+          51.2783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Stourhead",
         "category": "Itinerary Stop",
         "date": "2026-08-02",
@@ -332,6 +412,26 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "White Row Farm",
+        "category": "Food Option",
+        "date": "2026-08-04",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Top-tier local produce, farm shop, deli, and fantastic fish and chips with generous portions.",
+        "website": "https://www.whiterowfarm.co.uk/",
+        "image": "images/places/24-white-row-farm__ddc24e_678cc3efdb044457b8a59dc7e34c42b0~mv2.jpg",
+        "image_backup": "https://static.wixstatic.com/media/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2847,
+          51.2638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Montacute House",
         "category": "Itinerary Stop",
         "date": "2026-08-05",
@@ -414,6 +514,26 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "The Bishop's Table",
+        "category": "Food Option",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Award-winning cafe next to the Bishop's Palace moat serving local Somerset savory tarts.",
+        "website": "https://bishopspalace.org.uk/visit/bishops-table-cafe/",
+        "image": "images/places/28-the-bishop-s-table__The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg",
+        "image_backup": "https://bishopspalace.org.uk/wp-content/uploads/2024/10/The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6436,
+          51.2086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Glastonbury Tor",
         "category": "Itinerary Stop",
         "date": "2026-08-07",
@@ -435,6 +555,26 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "TEALS",
+        "category": "Food Option",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Vibrant, modern farm shop and restaurant along the A303 focused on West Country producers.",
+        "website": "https://teals.co.uk/",
+        "image": "images/places/27-teals__Teals_Homepage_Tile_2-n.jpg",
+        "image_backup": "https://teals.co.uk/wp-content/uploads/2022/08/Teals_Homepage_Tile_2-n.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.523,
+          51.0366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Clarke's Village (Outlet)",
         "category": "Itinerary Stop",
         "date": "2026-08-07",
@@ -449,6 +589,26 @@
         "coordinates": [
           -2.7399,
           51.1285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Kimbers' Farm Shop & Kitchen",
+        "category": "Food Option",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Traditional family-run farm shop and kitchen serving great Somerset ploughman's lunches.",
+        "website": "https://www.kimbersfarmshop.co.uk/",
+        "image": "images/places/33-kimbers-farm-shop-and-kitchen__kimbers-farm-shop-building.jpg",
+        "image_backup": "https://www.kimbersfarmshop.co.uk/images/layout/kimbers-farm-shop-building.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3785,
+          51.0768
         ]
       }
     },
