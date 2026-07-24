@@ -65,46 +65,6 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Lowden Garden Centre & Farm Shop",
-        "category": "Food Option",
-        "date": "2026-07-29",
-        "who": "4 adults + Amelia",
-        "description": "Superb farm shop and bustling cafe serving high-quality traditional British lunches near Lacock.",
-        "website": "http://www.lowdengardencentre.com/",
-        "image": "images/places/04-lowden-garden-centre-and-farm-shop__farmshop-produce.jpg",
-        "image_backup": "https://www.lowdengardencentre.com/wp-content/uploads/images/farmshop-produce.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1675,
-          51.3915
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "The Bridge Tea Rooms",
-        "category": "Food Option",
-        "date": "2026-07-29",
-        "who": "4 adults + Amelia",
-        "description": "Atmospheric 1675 tea room in Bradford-on-Avon serving classic cream teas and regional savouries.",
-        "website": "https://www.thebridgetearooms.co.uk/",
-        "image": "images/places/05-the-bridge-tea-rooms__49448661528_362461fa45_b-1.jpg",
-        "image_backup": "https://www.thebridgetearooms.co.uk/wp-content/uploads/2022/02/49448661528_362461fa45_b-1.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2505,
-          51.3473
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "Old Sarum",
         "category": "Itinerary Stop",
         "date": "2026-07-30",
@@ -130,7 +90,7 @@
         "category": "Itinerary Stop",
         "date": "2026-07-30",
         "who": "4 adults + Amelia",
-        "description": "Magnificent medieval cathedral, home to the best-preserved original copy of the Magna Carta.",
+        "description": "Magnificent medieval cathedral, home to the best-preserved original copy of the Magna Carta. Lunch at The Chapter House at 12:30.",
         "website": "https://www.salisburycathedral.org.uk/",
         "image": "images/places/07-salisbury-cathedral__Salisbury_Cathedral_from_the_Bishop_Grounds_c.1825.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Salisbury_Cathedral_from_the_North_West.jpg/640px-Salisbury_Cathedral_from_the_North_West.jpg"
@@ -192,7 +152,7 @@
         "category": "Food Option",
         "date": "2026-07-31",
         "who": "Full group inc. Al & Frank",
-        "description": "Traditional riverside pub in Tintern, ideal lunch or dinner stop alongside the abbey visit.",
+        "description": "Traditional riverside pub in Tintern — lunch stop alongside the abbey visit.",
         "website": "",
         "image": "images/places/10-the-anchor-inn-tintern__Tintern_village.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tintern_village.jpg"
@@ -202,26 +162,6 @@
         "coordinates": [
           -2.6762,
           51.6966
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Tidenham Chase (Meet Point)",
-        "category": "Itinerary Stop",
-        "date": "2026-07-31",
-        "who": "Full group inc. Al & Frank",
-        "description": "Car park meeting point on the B4228 in the Wye Valley for the full group to join up.",
-        "website": "",
-        "image": "images/places/11-tidenham-chase-meet-point__Tintern_Abbey,_Tintern_and_the_River_Wye_-_geograph.org.uk_-_11219.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Offa%27s_Dyke_Path_on_Tidenham_Chase_-_geograph.org.uk_-_1386762.jpg/640px-Offa%27s_Dyke_Path_on_Tidenham_Chase_-_geograph.org.uk_-_1386762.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6469,
-          51.653
         ]
       }
     },
@@ -274,7 +214,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-01",
         "who": "Full group inc. Al & Frank",
-        "description": "Scenic reservoir walk — morning plans with the full group.",
+        "description": "Scenic reservoir and wildlife walk — morning with the full group. Chew Valley Animal Park in the morning.",
         "website": "https://www.bristolwater.co.uk/chew-valley-lake/",
         "image": "images/places/14-chew-valley-lake__Chew_Valley_Lake,_Somerset,_UK_8_September_2025.png",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Chew_Valley_Lake_from_the_dam_-_geograph.org.uk_-_436034.jpg/640px-Chew_Valley_Lake_from_the_dam_-_geograph.org.uk_-_436034.jpg"
@@ -290,100 +230,41 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Salt & Malt (Chew Valley)",
-        "category": "Food Option",
-        "date": "2026-08-01",
-        "who": "Full group inc. Al & Frank",
-        "description": "Excellent, sustainable, fully gluten-free fish and chips right on the lakeside.",
-        "website": "https://saltandmalt.co.uk/chew-valley/",
-        "image": "images/places/15-salt-and-malt-chew-valley__friedfishonthepass-1200x800.jpg",
-        "image_backup": "https://saltandmalt.co.uk/wp-content/uploads/2019/10/friedfishonthepass-1200x800.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6067,
-          51.349
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "The Cheddar Gorge Cheese Company",
-        "category": "Food Option",
-        "date": "2026-08-01",
-        "who": "Full group inc. Al & Frank",
-        "description": "Authentic traditional cheddar cheese production and shop in the village.",
-        "website": "https://www.cheddaronline.co.uk/",
-        "image": "images/places/16-the-cheddar-gorge-cheese-company__Cheddar-Gorge-Cheese-29-scaled-2.jpg",
-        "image_backup": "https://www.cheddargorgecheese.com/wp-content/uploads/2023/11/Cheddar-Gorge-Cheese-29-scaled-2.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7763,
-          51.2783
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Bourton-on-the-Water",
+        "title": "Stourhead",
         "category": "Itinerary Stop",
         "date": "2026-08-02",
-        "who": "Fabio, Silvia & Amelia (afternoon)",
-        "description": "Possible afternoon in the Cotswolds — the 'Venice of the Cotswolds' with its low bridges over the River Windrush.",
-        "website": "https://www.bourtoninfo.com/",
-        "image": "images/places/17-bourton-on-the-water__Bourton_on_the_Water.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/2/23/Bourton_on_the_Water.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7573,
-          51.8841
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Hayles Fruit Farm",
-        "category": "Food Option",
-        "date": "2026-08-02",
-        "description": "Family-run fruit farm with an excellent cafe and farm shop. Great quality English breakfasts and lunches.",
-        "website": "https://www.haylesfruitfarm.co.uk/",
-        "image": "images/places/18-hayles-fruit-farm__Hayles_social-2x-1920w.png",
-        "image_backup": "https://lirp.cdn-website.com/d296fc1f/dms3rep/multi/opt/Hayles_social-2x-1920w.png"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.9271,
-          51.961
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Witley Court & Gardens",
-        "category": "Itinerary Stop",
-        "date": "2026-08-02",
-        "who": "Full group — boys depart via Droitwich",
-        "description": "Spectacular ruined English Heritage mansion with dramatic fountains and formal gardens in Worcestershire. Boys dropped off in Droitwich on the way.",
-        "website": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/",
-        "image": "images/places/19-witley-court-and-gardens__witley-banner-ext.png",
-        "heritage_organization": "English Heritage",
-        "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/witley-court/witley-banner-ext.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
+        "who": "Full group inc. Al & Frank",
+        "description": "Breathtaking 18th-century landscape garden on the Wiltshire–Somerset border — lakeside walks, classical temples, and a Palladian mansion. National Trust lunch included.",
+        "website": "https://www.nationaltrust.org.uk/visit/wiltshire/stourhead",
+        "image": "images/places/36-stourhead__stourhead-lake-bridge.jpg",
+        "heritage_organization": "National Trust",
+        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/wiltshire/places/stourhead/library/spring/1537729.jpg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -2.3395,
-          52.2822
+          51.1047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bristol City Centre",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Bristol and shopping — Cabot Circus, harbourside, Avon Gorge Cruise, and the city's vibrant food and culture scene. Boys leave at 9:30 from Bristol Bus Station.",
+        "website": "https://www.visitbristol.co.uk/",
+        "image": "images/places/21-bristol-city-centre__Bristol_Waterfront.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bristol_Waterfront.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5854,
+          51.4584
         ]
       }
     },
@@ -393,7 +274,7 @@
         "title": "Ashton Court Estate",
         "category": "Itinerary Stop",
         "date": "2026-08-03",
-        "who": "Adults only (Amelia at summer school)",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Magnificent 850-acre estate on the edge of Bristol — great for a walk with panoramic city views.",
         "website": "https://www.bristol.gov.uk/museums-parks-sports-culture/ashton-court-estate",
         "image": "images/places/20-ashton-court-estate__Ashton_Court_Mansion_-_geograph.org.uk_-_1567115.jpg",
@@ -410,30 +291,10 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Bristol City Centre",
-        "category": "Itinerary Stop",
-        "date": "2026-08-03",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Bristol and shopping — Cabot Circus, harbourside, and the city's vibrant food and culture scene.",
-        "website": "https://www.visitbristol.co.uk/",
-        "image": "images/places/21-bristol-city-centre__Bristol_Waterfront.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bristol_Waterfront.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.5854,
-          51.4584
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "Bradford on Avon",
         "category": "Itinerary Stop",
         "date": "2026-08-04",
-        "who": "Adults only (Amelia at summer school)",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Beautiful market town — visit the medieval Tithe Barn and the Saxon Church of St Laurence.",
         "website": "https://www.bradfordonavon.co.uk/",
         "image": "images/places/22-bradford-on-avon__bradford-tithe-barn-hero.jpg",
@@ -453,7 +314,7 @@
         "title": "Farleigh Hungerford Castle",
         "category": "Itinerary Stop",
         "date": "2026-08-04",
-        "who": "Adults only (Amelia at summer school)",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Ruined 14th-century castle with a fascinating chapel containing medieval wall paintings and tombs.",
         "website": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/",
         "image": "images/places/23-farleigh-hungerford-castle__farleigh_banner-jan24.png",
@@ -471,121 +332,21 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "White Row Farm",
-        "category": "Food Option",
-        "date": "2026-08-04",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Top-tier local produce, farm shop, deli, and fantastic fish and chips with generous portions.",
-        "website": "https://www.whiterowfarm.co.uk/",
-        "image": "images/places/24-white-row-farm__ddc24e_678cc3efdb044457b8a59dc7e34c42b0~mv2.jpg",
-        "image_backup": "https://static.wixstatic.com/media/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2847,
-          51.2638
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Clarke's Village (Outlet)",
+        "title": "Montacute House",
         "category": "Itinerary Stop",
         "date": "2026-08-05",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Popular designer outlet village in Street, Somerset — great for shopping.",
-        "website": "https://www.clarksvillage.co.uk/",
-        "image": "images/places/25-clarke-s-village-outlet__cv_headerimage_parking.jpg",
-        "image_backup": "https://content.landsec.com/media/tuwpyomf/cv_headerimage_parking.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7399,
-          51.1285
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Glastonbury Tor",
-        "category": "Itinerary Stop",
-        "date": "2026-08-05",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Iconic hill and St Michael's tower — a legendary Somerset landmark with panoramic views.",
-        "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor",
-        "image": "images/places/26-glastonbury-tor__st-michaels-tower-glastonbury-tor-somerset-1362928.jpg",
+        "who": "Fabio and Silvia only (Amelia at summer school)",
+        "description": "Magnificent Elizabethan National Trust mansion in Somerset with formal gardens.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house",
+        "image": "images/places/34-montacute-house__1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg",
         "heritage_organization": "National Trust",
-        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/glastonbury-tor/library/st-michaels-tower-glastonbury-tor-somerset-1362928.jpg"
+        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/montacute-house/library/summer/1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.6987,
-          51.1447
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "TEALS",
-        "category": "Food Option",
-        "date": "2026-08-05",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Vibrant, modern farm shop and restaurant along the A303 focused on West Country producers.",
-        "website": "https://teals.co.uk/",
-        "image": "images/places/27-teals__Teals_Homepage_Tile_2-n.jpg",
-        "image_backup": "https://teals.co.uk/wp-content/uploads/2022/08/Teals_Homepage_Tile_2-n.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.523,
-          51.0366
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "The Bishop's Table",
-        "category": "Food Option",
-        "date": "2026-08-05",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "Award-winning cafe next to the Bishop's Palace moat serving local Somerset savory tarts.",
-        "website": "https://bishopspalace.org.uk/visit/bishops-table-cafe/",
-        "image": "images/places/28-the-bishop-s-table__The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg",
-        "image_backup": "https://bishopspalace.org.uk/wp-content/uploads/2024/10/The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6436,
-          51.2086
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Wells Cathedral",
-        "category": "Itinerary Stop",
-        "date": "2026-08-05",
-        "who": "Adults only (Amelia at summer school)",
-        "description": "England's smallest city with a stunning medieval cathedral and Bishop's Palace moat.",
-        "website": "https://www.wellscathedral.org.uk/",
-        "image": "images/places/29-wells-cathedral__Wells_Cathedral_from_the_air.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wells_Cathedral_from_the_air.jpg/640px-Wells_Cathedral_from_the_air.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6445,
-          51.2103
+          -2.714,
+          50.9517
         ]
       }
     },
@@ -595,7 +356,7 @@
         "title": "Dunster Castle & Village",
         "category": "Itinerary Stop",
         "date": "2026-08-06",
-        "who": "Adults only (Amelia at summer school)",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Picturesque medieval village and National Trust castle on the edge of Exmoor.",
         "website": "https://www.nationaltrust.org.uk/visit/somerset/dunster-castle-and-watermill",
         "image": "images/places/30-dunster-castle-and-village__exterior-dunster-castle-somerset-1364017.jpg",
@@ -616,7 +377,7 @@
         "title": "Exmoor National Park",
         "category": "Itinerary Stop",
         "date": "2026-08-06",
-        "who": "Adults only (Amelia at summer school)",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Beautiful moorland national park — dramatic coastal scenery and wild ponies.",
         "website": "https://www.exmoor-nationalpark.gov.uk/",
         "image": "images/places/31-exmoor-national-park__North_Devon_Exmoor.jpg",
@@ -633,10 +394,71 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Wells Cathedral",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "England's smallest city with a stunning medieval cathedral and Bishop's Palace moat.",
+        "website": "https://www.wellscathedral.org.uk/",
+        "image": "images/places/29-wells-cathedral__Wells_Cathedral_from_the_air.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wells_Cathedral_from_the_air.jpg/640px-Wells_Cathedral_from_the_air.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6445,
+          51.2103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Glastonbury Tor",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Iconic hill and St Michael's tower — a legendary Somerset landmark with panoramic views.",
+        "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor",
+        "image": "images/places/26-glastonbury-tor__st-michaels-tower-glastonbury-tor-somerset-1362928.jpg",
+        "heritage_organization": "National Trust",
+        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/glastonbury-tor/library/st-michaels-tower-glastonbury-tor-somerset-1362928.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6987,
+          51.1447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Clarke's Village (Outlet)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Popular designer outlet village in Street, Somerset — great for shopping.",
+        "website": "https://www.clarksvillage.co.uk/",
+        "image": "images/places/25-clarke-s-village-outlet__cv_headerimage_parking.jpg",
+        "image_backup": "https://content.landsec.com/media/tuwpyomf/cv_headerimage_parking.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7399,
+          51.1285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Bristol Balloon Fiesta Nightglow",
         "category": "Itinerary Stop",
         "date": "2026-08-07",
-        "who": "4 adults + Amelia",
+        "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "The spectacular evening Nightglow event at the Bristol International Balloon Fiesta, Ashton Court Estate.",
         "website": "https://www.bristolballoonfiesta.co.uk/",
         "image": "images/places/32-bristol-balloon-fiesta-nightglow__64537d24793dc750740a43a0_Balloon-Sharing-Img.png",
@@ -653,41 +475,40 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Kimbers' Farm Shop & Kitchen",
-        "category": "Food Option",
-        "date": "2026-08-07",
-        "who": "Fabio and Silvia only",
-        "description": "Traditional family-run farm shop and kitchen serving great Somerset ploughman's lunches.",
-        "website": "https://www.kimbersfarmshop.co.uk/",
-        "image": "images/places/33-kimbers-farm-shop-and-kitchen__kimbers-farm-shop-building.jpg",
-        "image_backup": "https://www.kimbersfarmshop.co.uk/images/layout/kimbers-farm-shop-building.jpg"
+        "title": "Cotswolds",
+        "category": "Itinerary Stop",
+        "date": "2026-08-08",
+        "who": "All Adults (Amelia on day trip)",
+        "description": "A day exploring the iconic honey-stone villages of the Cotswolds — rolling hills, picture-perfect streets and traditional English countryside.",
+        "website": "https://www.cotswolds.com/",
+        "image": "images/places/37-cotswolds__cotswolds-village.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/A_street_in_Castle_Combe.jpg/640px-A_street_in_Castle_Combe.jpg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.3785,
-          51.0768
+          -1.8433,
+          51.8330
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "title": "Montacute House",
-        "category": "Itinerary Stop",
-        "date": "2026-08-07",
-        "who": "Fabio and Silvia only",
-        "description": "Magnificent Elizabethan National Trust mansion in Somerset with formal gardens.",
-        "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house",
-        "image": "images/places/34-montacute-house__1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg",
-        "heritage_organization": "National Trust",
-        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/montacute-house/library/summer/1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg"
+        "title": "The Malago",
+        "category": "Food Option",
+        "date": "2026-08-09",
+        "who": "All",
+        "description": "Relaxed Sunday and Sunday roast lunch at The Malago, a popular gastropub on North Street, Bedminster, Bristol.",
+        "website": "https://www.themalago.co.uk/",
+        "image": "images/places/38-the-malago__the-malago-bristol.jpg",
+        "image_backup": "https://www.themalago.co.uk/wp-content/uploads/2019/01/malago-exterior.jpg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.714,
-          50.9517
+          -2.5974,
+          51.4388
         ]
       }
     },
@@ -698,7 +519,7 @@
         "category": "Itinerary Stop",
         "date": "2026-08-10",
         "who": "4 adults + Amelia",
-        "description": "Final days trip to Oxford — the dreaming spires, university colleges, and the Bodleian Library.",
+        "description": "Final days trip to Oxford — the dreaming spires, Bodleian Library, Christ Church College, punting, Botanic Garden and the Ashmolean Museum.",
         "website": "https://www.experienceoxfordshire.org/",
         "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
         "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
