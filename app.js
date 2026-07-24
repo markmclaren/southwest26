@@ -6,7 +6,7 @@
 'use strict';
 
 // ── CONFIG ────────────────────────────────────────────────────
-const GEOJSON_URL = 'places.geojson';
+const GEOJSON_URL = 'places.geojson?v=2';
 const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 const MAP_CENTER = [-2.35, 51.35];
 const MAP_ZOOM = 8.5;
