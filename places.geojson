@@ -587,6 +587,24 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "ILC Bristol (Summer School)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Amelia",
+        "description": "International Language Centres (ILC) Bristol — Amelia's English summer school location at Portland Place.",
+        "website": "https://www.ilcenglish.com/locations/bristol"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5898,
+          51.4604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "M Shed",
         "category": "Itinerary Stop",
         "date": "2026-08-03",
@@ -646,6 +664,24 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "ILC Bristol (Summer School)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-04",
+        "who": "Amelia",
+        "description": "International Language Centres (ILC) Bristol — Amelia's English summer school location at Portland Place.",
+        "website": "https://www.ilcenglish.com/locations/bristol"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5898,
+          51.4604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "White Row Farm",
         "category": "Food Option",
         "date": "2026-08-04",
@@ -660,6 +696,24 @@
         "coordinates": [
           -2.2847,
           51.2638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "ILC Bristol (Summer School)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-05",
+        "who": "Amelia",
+        "description": "International Language Centres (ILC) Bristol — Amelia's English summer school location at Portland Place.",
+        "website": "https://www.ilcenglish.com/locations/bristol"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5898,
+          51.4604
         ]
       }
     },
@@ -768,6 +822,24 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "ILC Bristol (Summer School)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-06",
+        "who": "Amelia",
+        "description": "International Language Centres (ILC) Bristol — Amelia's English summer school location at Portland Place.",
+        "website": "https://www.ilcenglish.com/locations/bristol"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5898,
+          51.4604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Bristol Balloon Fiesta Nightglow",
         "category": "Itinerary Stop",
         "date": "2026-08-07",
@@ -843,6 +915,24 @@
         "coordinates": [
           -2.6987,
           51.1447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "ILC Bristol (Summer School)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-07",
+        "who": "Amelia",
+        "description": "International Language Centres (ILC) Bristol — Amelia's English summer school location at Portland Place.",
+        "website": "https://www.ilcenglish.com/locations/bristol"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5898,
+          51.4604
         ]
       }
     },
