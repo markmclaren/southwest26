@@ -173,7 +173,7 @@ body {
 }
 /* ── DAY CAROUSEL ───────────────────────────────────────────── */
 .day-carousel {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0;
   background: #f8fafc;
@@ -181,7 +181,7 @@ body {
   border-radius: 999px;
   overflow: hidden;
   flex: 1 1 auto;
-  max-width: 420px;
+  width: 100%;
 }
 .day-carousel-btn {
   background: transparent;
