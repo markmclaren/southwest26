@@ -457,6 +457,24 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Stourhead NT Restaurant",
+        "category": "Food Option",
+        "date": "2026-08-02",
+        "who": "Full group inc. Al & Frank",
+        "description": "National Trust restaurant at Stourhead serving hot lunches, sandwiches, cakes, and regional cream teas.",
+        "website": "https://www.nationaltrust.org.uk/visit/wiltshire/stourhead/eating-at-stourhead"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3184,
+          51.1039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Ashton Court Estate",
         "category": "Itinerary Stop",
         "date": "2026-08-03",
@@ -491,6 +509,96 @@
         "coordinates": [
           -2.5854,
           51.4584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bristol Harbour",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Historic and picturesque floating harbour lined with historic ships, boat tours, cafes, and scenic walks.",
+        "website": "https://www.visitbristol.co.uk/things-to-do/bristol-harbourside-p507851"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5985,
+          51.4503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cabot Circus",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Major shopping and dining destination under a spectacular glass shell canopy in Bristol city centre.",
+        "website": "https://www.cabotcircus.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5855,
+          51.4588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cargo (Wapping Wharf)",
+        "category": "Food Option",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Dynamic food and retail hub constructed from converted shipping containers along Wapping Wharf.",
+        "website": "https://wappingwharf.co.uk/cargo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5975,
+          51.4475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Harvey Nichols, Bristol",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Luxury boutique department store in Cabot Circus featuring high-end fashion, beauty, and a stylish Second Floor Bistro.",
+        "website": "https://www.harveynichols.com/store/bristol/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5878,
+          51.4589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "M Shed",
+        "category": "Itinerary Stop",
+        "date": "2026-08-03",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Flagship harbour museum in converted transit sheds telling the history of Bristol through art, artifacts, and stories.",
+        "website": "https://www.bristolmuseums.org.uk/m-shed/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5969,
+          51.4485
         ]
       }
     },
@@ -1123,6 +1231,24 @@
         "coordinates": [
           -1.2544,
           51.7517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Redbridge Park & Ride (Oxford)",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Park & Ride car park on the south side of Oxford with frequent buses direct into the city centre.",
+        "website": "https://www.oxford.gov.uk/park-ride-locations/redbridge-park-ride"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2514,
+          51.7302
         ]
       }
     }
