@@ -10,16 +10,14 @@
         "who": "All",
         "description": "Arrival day — settle in, welcome dinner at the Royal Oak in Portishead. Base for the whole visit.",
         "website": "https://www.visitclevedon.co.uk/",
+        "schedule": [
+          { "time": "All day", "activity": "Arrival — settle in" },
+          { "time": "Dinner", "activity": "Royal Oak, Portishead" }
+        ],
         "image": "images/places/01-clevedon-home-base__1633818.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/bath-bristol/places/clevedon-court/library/spring/1633818.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.8527,
-          51.4361
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.8527, 51.4361] }
     },
     {
       "type": "Feature",
@@ -33,13 +31,7 @@
         "image": "images/places/02-castle-combe__A_street_in_Castle_Combe.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/a/ac/A_street_in_Castle_Combe.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.229,
-          51.4934
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.229, 51.4934] }
     },
     {
       "type": "Feature",
@@ -50,17 +42,11 @@
         "who": "4 adults + Amelia",
         "description": "Historic National Trust abbey and village — a Harry Potter filming location, a must for Amelia!",
         "website": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock-abbey-fox-talbot-museum-and-village",
-        "image": "images/places/03-lacock-abbey-and-village__1742375.jpg",
         "heritage_organization": "National Trust",
+        "image": "images/places/03-lacock-abbey-and-village__1742375.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/wiltshire/places/lacock/library/summer/1742375.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1169,
-          51.4148
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.1169, 51.4148] }
     },
     {
       "type": "Feature",
@@ -74,13 +60,7 @@
         "image": "images/places/04-lowden-garden-centre-and-farm-shop__farmshop-produce.jpg",
         "image_backup": "https://www.lowdengardencentre.com/wp-content/uploads/images/farmshop-produce.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1675,
-          51.3915
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.1675, 51.3915] }
     },
     {
       "type": "Feature",
@@ -94,54 +74,7 @@
         "image": "images/places/05-the-bridge-tea-rooms__49448661528_362461fa45_b-1.jpg",
         "image_backup": "https://www.thebridgetearooms.co.uk/wp-content/uploads/2022/02/49448661528_362461fa45_b-1.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2505,
-          51.3473
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Old Sarum",
-        "category": "Itinerary Stop",
-        "date": "2026-07-30",
-        "who": "4 adults + Amelia",
-        "description": "Ruins of the original Salisbury — an Iron Age hill fort, Roman settlement and Norman castle.",
-        "website": "https://www.english-heritage.org.uk/visit/places/old-sarum/",
-        "image": "images/places/06-old-sarum__old-sarum-aerial-shutterstock.png",
-        "heritage_organization": "English Heritage",
-        "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/old-sarum/old-sarum-aerial-shutterstock.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8047,
-          51.0934
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Salisbury Cathedral",
-        "category": "Itinerary Stop",
-        "date": "2026-07-30",
-        "who": "4 adults + Amelia",
-        "description": "Magnificent medieval cathedral, home to the best-preserved original copy of the Magna Carta. Lunch at The Chapter House at 12:30.",
-        "website": "https://www.salisburycathedral.org.uk/",
-        "image": "images/places/07-salisbury-cathedral__Salisbury_Cathedral_from_the_Bishop_Grounds_c.1825.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Salisbury_Cathedral_from_the_North_West.jpg/640px-Salisbury_Cathedral_from_the_North_West.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7973,
-          51.065
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.2505, 51.3473] }
     },
     {
       "type": "Feature",
@@ -152,17 +85,91 @@
         "who": "4 adults + Amelia",
         "description": "Historic stone circle — one of the world's most famous prehistoric monuments.",
         "website": "https://www.english-heritage.org.uk/visit/places/stonehenge/",
-        "image": "images/places/08-stonehenge__solstice-banner.jpg",
         "heritage_organization": "English Heritage",
+        "schedule": [
+          { "time": "08:00", "activity": "Depart Clevedon" },
+          { "time": "09:30", "activity": "Arrive Stonehenge" },
+          { "time": "10:00–12:00", "activity": "Stonehenge visit" },
+          { "time": "12:00–12:20", "activity": "Drive to Salisbury" }
+        ],
+        "image": "images/places/08-stonehenge__solstice-banner.jpg",
         "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/stonehenge/solstice-banner.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8262,
-          51.1789
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-1.8262, 51.1789] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Salisbury Cathedral",
+        "category": "Itinerary Stop",
+        "date": "2026-07-30",
+        "who": "4 adults + Amelia",
+        "description": "Magnificent medieval cathedral, home to the best-preserved original copy of the Magna Carta.",
+        "website": "https://www.salisburycathedral.org.uk/",
+        "schedule": [
+          { "time": "12:30–13:30", "activity": "Lunch at The Chapter House" },
+          { "time": "13:30–14:30", "activity": "Salisbury Cathedral" },
+          { "time": "14:30–14:40", "activity": "Drive to Old Sarum" }
+        ],
+        "image": "images/places/07-salisbury-cathedral__Salisbury_Cathedral_from_the_Bishop_Grounds_c.1825.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Salisbury_Cathedral_from_the_North_West.jpg/640px-Salisbury_Cathedral_from_the_North_West.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.7973, 51.065] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Old Sarum",
+        "category": "Itinerary Stop",
+        "date": "2026-07-30",
+        "who": "4 adults + Amelia",
+        "description": "Ruins of the original Salisbury — an Iron Age hill fort, Roman settlement and Norman castle.",
+        "website": "https://www.english-heritage.org.uk/visit/places/old-sarum/",
+        "heritage_organization": "English Heritage",
+        "schedule": [
+          { "time": "14:40–15:55", "activity": "Old Sarum" },
+          { "time": "15:55–17:15", "activity": "Drive back to Clevedon" },
+          { "time": "20:30", "activity": "Pick up boys from Bristol" }
+        ],
+        "image": "images/places/06-old-sarum__old-sarum-aerial-shutterstock.png",
+        "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/old-sarum/old-sarum-aerial-shutterstock.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.8047, 51.0934] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Tintern Abbey",
+        "category": "Itinerary Stop",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Spectacular ruined Cistercian abbey in the Wye Valley.",
+        "website": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey",
+        "heritage_organization": "Cadw",
+        "schedule": [
+          { "time": "10:00", "activity": "Leave Clevedon" },
+          { "time": "11:00–12:15", "activity": "Devil's Pulpit viewpoint" },
+          { "time": "12:25–13:10", "activity": "Tintern Abbey" },
+          { "time": "13:10–14:25", "activity": "Lunch at The Anchor Inn" }
+        ],
+        "image": "images/places/12-tintern-abbey__SVW-C29-1314-0066.JPG",
+        "image_backup": "https://cadw.gov.wales/sites/default/files/styles/promo/public/2019-05/SVW-C29-1314-0066.JPG?h=6103f89c&itok=l6cpm250"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6767, 51.6971] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Anchor Inn (Tintern)",
+        "category": "Food Option",
+        "date": "2026-07-31",
+        "who": "Full group inc. Al & Frank",
+        "description": "Traditional riverside pub in Tintern — lunch stop alongside the abbey visit (13:10–14:25).",
+        "website": "",
+        "image": "images/places/10-the-anchor-inn-tintern__Tintern_village.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tintern_village.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.6762, 51.6966] }
     },
     {
       "type": "Feature",
@@ -173,79 +180,15 @@
         "who": "Full group inc. Al & Frank",
         "description": "Impressive medieval castle in the Wye Valley, English Heritage.",
         "website": "https://www.english-heritage.org.uk/visit/places/goodrich-castle/",
-        "image": "images/places/09-goodrich-castle__goodrich-23_web-banner-still.jpg",
         "heritage_organization": "English Heritage",
+        "schedule": [
+          { "time": "15:00–16:15", "activity": "Goodrich Castle" },
+          { "time": "17:30–17:45", "activity": "Arrive back in Clevedon" }
+        ],
+        "image": "images/places/09-goodrich-castle__goodrich-23_web-banner-still.jpg",
         "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/goodrich-castle/goodrich-23_web-banner-still.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6155,
-          51.8768
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "The Anchor Inn (Tintern)",
-        "category": "Food Option",
-        "date": "2026-07-31",
-        "who": "Full group inc. Al & Frank",
-        "description": "Traditional riverside pub in Tintern — lunch stop alongside the abbey visit.",
-        "website": "",
-        "image": "images/places/10-the-anchor-inn-tintern__Tintern_village.jpg",
-        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tintern_village.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6762,
-          51.6966
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Tintern Abbey",
-        "category": "Itinerary Stop",
-        "date": "2026-07-31",
-        "who": "Full group inc. Al & Frank",
-        "description": "Spectacular ruined Cistercian abbey in the Wye Valley — boys arrive ~10am and join here.",
-        "website": "https://cadw.gov.wales/visit/places-to-visit/tintern-abbey",
-        "image": "images/places/12-tintern-abbey__SVW-C29-1314-0066.JPG",
-        "heritage_organization": "Cadw",
-        "image_backup": "https://cadw.gov.wales/sites/default/files/styles/promo/public/2019-05/SVW-C29-1314-0066.JPG?h=6103f89c&itok=l6cpm250"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6767,
-          51.6971
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Cheddar Gorge",
-        "category": "Itinerary Stop",
-        "date": "2026-08-01",
-        "who": "Full group inc. Al & Frank",
-        "description": "Dramatic limestone gorge and cliff walks — afternoon visit.",
-        "website": "https://www.cheddargorge.co.uk/",
-        "image": "images/places/13-cheddar-gorge__cheddar-gorge-somerset-1334813.jpg",
-        "heritage_organization": "National Trust",
-        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/cheddar-gorge/library/summer/cheddar-gorge-somerset-1334813.jpg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7597,
-          51.2854
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6155, 51.8768] }
     },
     {
       "type": "Feature",
@@ -254,18 +197,17 @@
         "category": "Itinerary Stop",
         "date": "2026-08-01",
         "who": "Full group inc. Al & Frank",
-        "description": "Scenic reservoir and wildlife walk — morning with the full group. Chew Valley Animal Park in the morning.",
+        "description": "Scenic reservoir and wildlife walk — morning with the full group, including Chew Valley Animal Park.",
         "website": "https://www.bristolwater.co.uk/chew-valley-lake/",
+        "schedule": [
+          { "time": "09:15–10:00", "activity": "Depart Clevedon" },
+          { "time": "10:00–12:30", "activity": "Chew Valley Animal Park" },
+          { "time": "12:35–14:30", "activity": "Chew Valley Lake walk" }
+        ],
         "image": "images/places/14-chew-valley-lake__Chew_Valley_Lake,_Somerset,_UK_8_September_2025.png",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Chew_Valley_Lake_from_the_dam_-_geograph.org.uk_-_436034.jpg/640px-Chew_Valley_Lake_from_the_dam_-_geograph.org.uk_-_436034.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6175,
-          51.3359
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6175, 51.3359] }
     },
     {
       "type": "Feature",
@@ -279,13 +221,27 @@
         "image": "images/places/15-salt-and-malt-chew-valley__friedfishonthepass-1200x800.jpg",
         "image_backup": "https://saltandmalt.co.uk/wp-content/uploads/2019/10/friedfishonthepass-1200x800.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6067,
-          51.349
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6067, 51.349] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cheddar Gorge",
+        "category": "Itinerary Stop",
+        "date": "2026-08-01",
+        "who": "Full group inc. Al & Frank",
+        "description": "Dramatic limestone gorge and cliff walks — afternoon visit.",
+        "website": "https://www.cheddargorge.co.uk/",
+        "heritage_organization": "National Trust",
+        "schedule": [
+          { "time": "14:30–15:00", "activity": "Mendip Mountain Pass drive" },
+          { "time": "15:00–17:30", "activity": "Cheddar Gorge" },
+          { "time": "17:30–18:15", "activity": "Return to Clevedon" }
+        ],
+        "image": "images/places/13-cheddar-gorge__cheddar-gorge-somerset-1334813.jpg",
+        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/cheddar-gorge/library/summer/cheddar-gorge-somerset-1334813.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7597, 51.2854] }
     },
     {
       "type": "Feature",
@@ -299,13 +255,7 @@
         "image": "images/places/16-the-cheddar-gorge-cheese-company__Cheddar-Gorge-Cheese-29-scaled-2.jpg",
         "image_backup": "https://www.cheddargorgecheese.com/wp-content/uploads/2023/11/Cheddar-Gorge-Cheese-29-scaled-2.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7763,
-          51.2783
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.7763, 51.2783] }
     },
     {
       "type": "Feature",
@@ -316,17 +266,11 @@
         "who": "Full group inc. Al & Frank",
         "description": "Breathtaking 18th-century landscape garden on the Wiltshire–Somerset border — lakeside walks, classical temples, and a Palladian mansion. National Trust lunch included.",
         "website": "https://www.nationaltrust.org.uk/visit/wiltshire/stourhead",
-        "image": "images/places/36-stourhead__stourhead-lake-bridge.jpg",
         "heritage_organization": "National Trust",
+        "image": "images/places/36-stourhead__stourhead-lake-bridge.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/wiltshire/places/stourhead/library/spring/1537729.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.3395,
-          51.1047
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.3395, 51.1047] }
     },
     {
       "type": "Feature",
@@ -340,13 +284,7 @@
         "image": "images/places/21-bristol-city-centre__Bristol_Waterfront.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bristol_Waterfront.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.5854,
-          51.4584
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.5854, 51.4584] }
     },
     {
       "type": "Feature",
@@ -360,13 +298,7 @@
         "image": "images/places/20-ashton-court-estate__Ashton_Court_Mansion_-_geograph.org.uk_-_1567115.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ashton_Court_Mansion_-_geograph.org.uk_-_1567115.jpg/640px-Ashton_Court_Mansion_-_geograph.org.uk_-_1567115.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6438,
-          51.4461
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6438, 51.4461] }
     },
     {
       "type": "Feature",
@@ -380,13 +312,7 @@
         "image": "images/places/22-bradford-on-avon__bradford-tithe-barn-hero.jpg",
         "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/bradford-on-avon-tithe-barn/bradford-tithe-barn-hero.jpg?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2504,
-          51.3467
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.2504, 51.3467] }
     },
     {
       "type": "Feature",
@@ -397,17 +323,11 @@
         "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Ruined 14th-century castle with a fascinating chapel containing medieval wall paintings and tombs.",
         "website": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/",
-        "image": "images/places/23-farleigh-hungerford-castle__farleigh_banner-jan24.png",
         "heritage_organization": "English Heritage",
+        "image": "images/places/23-farleigh-hungerford-castle__farleigh_banner-jan24.png",
         "image_backup": "https://www.english-heritage.org.uk/siteassets/home/visit/places-to-visit/farleigh-hungerford/farleigh_banner-jan24.png?w=550&h=442&mode=crop&scale=both&cache=always&quality=60&anchor=&WebsiteVersion=20200219"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.287,
-          51.3175
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.287, 51.3175] }
     },
     {
       "type": "Feature",
@@ -421,13 +341,7 @@
         "image": "images/places/24-white-row-farm__ddc24e_678cc3efdb044457b8a59dc7e34c42b0~mv2.jpg",
         "image_backup": "https://static.wixstatic.com/media/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/ddc24e_678cc3efdb044457b8a59dc7e34c42b0%7Emv2.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2847,
-          51.2638
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.2847, 51.2638] }
     },
     {
       "type": "Feature",
@@ -438,17 +352,25 @@
         "who": "Fabio and Silvia only (Amelia at summer school)",
         "description": "Magnificent Elizabethan National Trust mansion in Somerset with formal gardens.",
         "website": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house",
-        "image": "images/places/34-montacute-house__1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg",
         "heritage_organization": "National Trust",
+        "image": "images/places/34-montacute-house__1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/montacute-house/library/summer/1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.714,
-          50.9517
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.714, 50.9517] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Phelips Arms",
+        "category": "Food Option",
+        "date": "2026-08-05",
+        "who": "Fabio and Silvia only (Amelia at summer school)",
+        "description": "Traditional village pub directly opposite Montacute House — ideal for lunch after the NT visit.",
+        "website": "https://www.phelipsarms.co.uk/",
+        "image": "images/places/34-montacute-house__1676341-chesnut-tree-and-cedar-lawn-at-montacute-house-somerset-chris-davies.jpg",
+        "image_backup": "https://www.phelipsarms.co.uk/wp-content/uploads/2022/01/phelips-arms-exterior.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7139, 50.9514] }
     },
     {
       "type": "Feature",
@@ -459,17 +381,25 @@
         "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Picturesque medieval village and National Trust castle on the edge of Exmoor.",
         "website": "https://www.nationaltrust.org.uk/visit/somerset/dunster-castle-and-watermill",
-        "image": "images/places/30-dunster-castle-and-village__exterior-dunster-castle-somerset-1364017.jpg",
         "heritage_organization": "National Trust",
+        "image": "images/places/30-dunster-castle-and-village__exterior-dunster-castle-somerset-1364017.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/dunster-castle-and-watermill/library/autumn/exterior-dunster-castle-somerset-1364017.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.4437,
-          51.1817
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-3.4437, 51.1817] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Dunster Eating Guide",
+        "category": "Food Option",
+        "date": "2026-08-06",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "Dunster village has several good options for lunch and tea — see the local eating guide for pubs, cafes and tea rooms.",
+        "website": "https://www.dunster.org.uk/eat/",
+        "image": "images/places/30-dunster-castle-and-village__exterior-dunster-castle-somerset-1364017.jpg",
+        "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/dunster-castle-and-watermill/library/autumn/exterior-dunster-castle-somerset-1364017.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.4437, 51.1817] }
     },
     {
       "type": "Feature",
@@ -483,13 +413,7 @@
         "image": "images/places/31-exmoor-national-park__North_Devon_Exmoor.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/d/d2/North_Devon_Exmoor.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.604,
-          51.1338
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-3.604, 51.1338] }
     },
     {
       "type": "Feature",
@@ -503,13 +427,7 @@
         "image": "images/places/29-wells-cathedral__Wells_Cathedral_from_the_air.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wells_Cathedral_from_the_air.jpg/640px-Wells_Cathedral_from_the_air.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6445,
-          51.2103
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6445, 51.2103] }
     },
     {
       "type": "Feature",
@@ -523,13 +441,7 @@
         "image": "images/places/28-the-bishop-s-table__The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg",
         "image_backup": "https://bishopspalace.org.uk/wp-content/uploads/2024/10/The-Bishops-Table-Cafe-at-the-Bishops-Palace-Wells-web.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6436,
-          51.2086
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6436, 51.2086] }
     },
     {
       "type": "Feature",
@@ -540,17 +452,11 @@
         "who": "Fabio and Silvia (Amelia at summer school)",
         "description": "Iconic hill and St Michael's tower — a legendary Somerset landmark with panoramic views.",
         "website": "https://www.nationaltrust.org.uk/visit/somerset/glastonbury-tor",
-        "image": "images/places/26-glastonbury-tor__st-michaels-tower-glastonbury-tor-somerset-1362928.jpg",
         "heritage_organization": "National Trust",
+        "image": "images/places/26-glastonbury-tor__st-michaels-tower-glastonbury-tor-somerset-1362928.jpg",
         "image_backup": "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/somerset/places/glastonbury-tor/library/st-michaels-tower-glastonbury-tor-somerset-1362928.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6987,
-          51.1447
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6987, 51.1447] }
     },
     {
       "type": "Feature",
@@ -564,13 +470,7 @@
         "image": "images/places/27-teals__Teals_Homepage_Tile_2-n.jpg",
         "image_backup": "https://teals.co.uk/wp-content/uploads/2022/08/Teals_Homepage_Tile_2-n.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.523,
-          51.0366
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.523, 51.0366] }
     },
     {
       "type": "Feature",
@@ -584,13 +484,21 @@
         "image": "images/places/25-clarke-s-village-outlet__cv_headerimage_parking.jpg",
         "image_backup": "https://content.landsec.com/media/tuwpyomf/cv_headerimage_parking.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7399,
-          51.1285
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.7399, 51.1285] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cornish Bakery (Clarke's Village)",
+        "category": "Food Option",
+        "date": "2026-08-07",
+        "who": "Fabio and Silvia (Amelia at summer school)",
+        "description": "The Cornish Bakery at Clarke's Village — freshly baked pasties, sandwiches and cakes.",
+        "website": "https://www.clarksvillage.co.uk/en/eat-listing/the-cornish-bakery",
+        "image": "images/places/25-clarke-s-village-outlet__cv_headerimage_parking.jpg",
+        "image_backup": "https://content.landsec.com/media/tuwpyomf/cv_headerimage_parking.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.7399, 51.1285] }
     },
     {
       "type": "Feature",
@@ -604,13 +512,7 @@
         "image": "images/places/33-kimbers-farm-shop-and-kitchen__kimbers-farm-shop-building.jpg",
         "image_backup": "https://www.kimbersfarmshop.co.uk/images/layout/kimbers-farm-shop-building.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.3785,
-          51.0768
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.3785, 51.0768] }
     },
     {
       "type": "Feature",
@@ -619,18 +521,12 @@
         "category": "Itinerary Stop",
         "date": "2026-08-07",
         "who": "Fabio and Silvia (Amelia at summer school)",
-        "description": "The spectacular evening Nightglow event at the Bristol International Balloon Fiesta, Ashton Court Estate.",
+        "description": "The spectacular evening Nightglow event at the Bristol International Balloon Fiesta, Ashton Court Estate. Need to be there by 5pm.",
         "website": "https://www.bristolballoonfiesta.co.uk/",
         "image": "images/places/32-bristol-balloon-fiesta-nightglow__64537d24793dc750740a43a0_Balloon-Sharing-Img.png",
         "image_backup": "https://cdn.prod.website-files.com/641daf812bc7f4c4502f6d84/64537d24793dc750740a43a0_Balloon-Sharing-Img.png"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6438,
-          51.4461
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.6438, 51.4461] }
     },
     {
       "type": "Feature",
@@ -639,18 +535,26 @@
         "category": "Itinerary Stop",
         "date": "2026-08-08",
         "who": "All Adults (Amelia on day trip)",
-        "description": "A day exploring the iconic honey-stone villages of the Cotswolds — rolling hills, picture-perfect streets and traditional English countryside.",
+        "description": "A day exploring the iconic honey-stone villages — Bourton-on-the-Water, Stow-on-the-Wold and Chipping Campden.",
         "website": "https://www.cotswolds.com/",
         "image": "images/places/37-cotswolds__cotswolds-village.jpg",
         "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/A_street_in_Castle_Combe.jpg/640px-A_street_in_Castle_Combe.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.8433,
-          51.8330
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-1.8433, 51.833] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cotswold Barn",
+        "category": "Food Option",
+        "date": "2026-08-08",
+        "who": "All Adults (Amelia on day trip)",
+        "description": "Cotswold Barn — a popular lunch stop in the Cotswolds.",
+        "website": "https://www.cotswoldbarn.com/",
+        "image": "images/places/37-cotswolds__cotswolds-village.jpg",
+        "image_backup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/A_street_in_Castle_Combe.jpg/640px-A_street_in_Castle_Combe.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.8433, 51.833] }
     },
     {
       "type": "Feature",
@@ -664,13 +568,7 @@
         "image": "images/places/38-the-malago__the-malago-bristol.jpg",
         "image_backup": "https://www.themalago.co.uk/wp-content/uploads/2019/01/malago-exterior.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.5974,
-          51.4388
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-2.5974, 51.4388] }
     },
     {
       "type": "Feature",
@@ -679,18 +577,111 @@
         "category": "Itinerary Stop",
         "date": "2026-08-10",
         "who": "4 adults + Amelia",
-        "description": "Final days trip to Oxford — the dreaming spires, Bodleian Library, Christ Church College, punting, Botanic Garden and the Ashmolean Museum.",
+        "description": "Final days trip to Oxford — the dreaming spires, university colleges, punting and museums.",
         "website": "https://www.experienceoxfordshire.org/",
+        "schedule": [
+          { "time": "08:00", "activity": "Depart Clevedon" },
+          { "time": "09:30", "activity": "Park at Westgate" },
+          { "time": "09:45", "activity": "Radcliffe Camera" },
+          { "time": "10:00", "activity": "Bodleian Library tour" },
+          { "time": "11:00", "activity": "Church tower" },
+          { "time": "11:30", "activity": "Christ Church College" },
+          { "time": "12:45", "activity": "Covered Market lunch" },
+          { "time": "13:15", "activity": "Riverside picnic" },
+          { "time": "14:00", "activity": "Punting" },
+          { "time": "15:30", "activity": "Botanic Garden" },
+          { "time": "16:30", "activity": "Ashmolean Museum" },
+          { "time": "17:45", "activity": "Bridge of Sighs + Blackwell's" },
+          { "time": "18:30", "activity": "Drive home" }
+        ],
         "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
         "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2578,
-          51.752
-        ]
-      }
+      "geometry": { "type": "Point", "coordinates": [-1.2578, 51.752] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Radcliffe Camera",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Oxford's most iconic circular library building — a stunning example of English Baroque architecture.",
+        "website": "https://www.bodleian.ox.ac.uk/libraries/rad-cam",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2544, 51.7517] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bodleian Library",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "One of the oldest libraries in Europe — guided tour booked in advance.",
+        "website": "https://www.bodleian.ox.ac.uk/",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2541, 51.7541] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Christ Church College",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Oxford's grandest college — home to the Great Hall (Harry Potter's Hogwarts) and Tom Tower.",
+        "website": "https://www.chch.ox.ac.uk/",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2567, 51.7499] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Oxford Covered Market",
+        "category": "Food Option",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Historic Victorian covered market with a wide range of independent food stalls — lunch stop at 12:45.",
+        "website": "https://oxford-coveredmarket.co.uk/",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2581, 51.7525] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Oxford Botanic Garden",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Britain's oldest botanic garden, founded in 1621 — beautiful walled garden beside the River Cherwell.",
+        "website": "https://www.obga.ox.ac.uk/",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2497, 51.7497] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ashmolean Museum",
+        "category": "Itinerary Stop",
+        "date": "2026-08-10",
+        "who": "4 adults + Amelia",
+        "description": "Britain's oldest public museum — world-class art and archaeology collections, free entry.",
+        "website": "https://www.ashmolean.org/",
+        "image": "images/places/35-oxford__Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg",
+        "image_backup": "https://www.experienceoxfordshire.org/wp-content/uploads/2017/03/Experience-Oxfordshire-Oxford-compressed15-scaled-1340x894.jpg"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.2601, 51.7554] }
     }
   ]
 }

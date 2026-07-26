@@ -417,6 +417,18 @@ const detailOverlay = document.getElementById('detailOverlay');
 const detailBody = document.getElementById('detailBody');
 const detailClose = document.getElementById('detailClose');
 
+function scheduleMarkup(schedule) {
+  if (!schedule || !schedule.length) return '';
+  const rows = schedule.map(s =>
+    `<tr><td class="sched-time">${s.time}</td><td class="sched-act">${s.activity}</td></tr>`
+  ).join('');
+  return `
+    <div class="detail-schedule">
+      <div class="detail-schedule-heading"><i class="bi bi-clock"></i> Schedule</div>
+      <table class="sched-table"><tbody>${rows}</tbody></table>
+    </div>`;
+}
+
 function openDetail(feature, idx) {
   const p = feature.properties;
   const cls = catClass(p.category);
@@ -443,6 +455,7 @@ function openDetail(feature, idx) {
           ${p.heritage_organization}
         </div>` : ''}
       <p class="detail-desc">${p.description}</p>
+      ${scheduleMarkup(p.schedule)}
       <a class="btn-website" href="${directionsHref}" target="_blank" rel="noopener">
         <i class="bi bi-map"></i> Directions in Google Maps
       </a>
