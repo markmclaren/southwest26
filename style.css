@@ -176,49 +176,58 @@ body {
   display: flex;
   align-items: center;
   gap: 0;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
   border-radius: 999px;
   overflow: hidden;
   flex: 1 1 auto;
   width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .day-carousel-btn {
-  background: transparent;
+  background: var(--col-header);
+  color: #ffffff;
   border: none;
-  padding: 0.3rem 0.75rem;
-  color: var(--col-header);
-  font-size: 0.9rem;
+  padding: 0.45rem 1.1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.2s ease;
   line-height: 1;
 }
-.day-carousel-btn:hover {
-  background: var(--col-header);
-  color: #fff;
+.day-carousel-btn:hover:not(:disabled) {
+  background: #2563eb;
+  color: #ffffff;
+}
+.day-carousel-btn:active:not(:disabled) {
+  background: #1d4ed8;
+  transform: scale(0.96);
 }
 .day-carousel-btn:disabled {
-  color: #cbd5e1;
-  cursor: default;
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 .day-carousel-btn:disabled:hover {
-  background: transparent;
-  color: #cbd5e1;
+  background: #e2e8f0;
+  color: #94a3b8;
 }
 .day-carousel-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: #1e3a5f;
-  padding: 0.35rem 1rem;
+  padding: 0.45rem 1rem;
   flex: 1 1 auto;
   text-align: center;
   white-space: nowrap;
-  border-left: 1px solid #e2e8f0;
-  border-right: 1px solid #e2e8f0;
   user-select: none;
+  background: #f8fafc;
+  border-left: 1.5px solid #cbd5e1;
+  border-right: 1.5px solid #cbd5e1;
 }
 
 /* ── FILTER BAR ROWS ───────────────────────────────────────── */
