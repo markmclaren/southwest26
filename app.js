@@ -6,7 +6,7 @@
 'use strict';
 
 // ── CONFIG ────────────────────────────────────────────────────
-const GEOJSON_URL = 'places.geojson?v=3';
+const GEOJSON_URL = 'places.geojson?v=4';
 const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 const MAP_CENTER = [-2.35, 51.35];
 const MAP_ZOOM = 8.5;
@@ -84,6 +84,7 @@ fetch(GEOJSON_URL)
     } else {
       map.once('load', () => schedulePanToVisibleCentroid('initial-load'));
     }
+
   })
   .catch(err => console.error('Failed to load places.geojson:', err));
 
@@ -222,57 +223,61 @@ function schedulePanToVisibleCentroid(reason) {
   });
 }
 
-// ── DAY FILTERS ───────────────────────────────────────────────
-function buildDayFilters() {
-  const bar = document.getElementById('filterBar').querySelector('.day-filter-row');
-  const daySelect = document.getElementById('daySelect');
+// ── DAY CAROUSEL ──────────────────────────────────────────────
+let carouselDates = [];   // ['all', '2026-07-28', '2026-07-29', ...]
+let carouselIndex = 0;   // index into carouselDates
 
+function buildDayFilters() {
   const dates = [...new Set(
     allFeatures.map(f => f.properties.date).filter(Boolean)
   )].sort();
 
-  if (daySelect) {
-    daySelect.innerHTML = '';
+  carouselDates = ['all', ...dates];
+  carouselIndex = 0;  // start on 'All'
 
-    const allOption = document.createElement('option');
-    allOption.value = 'all';
-    allOption.textContent = 'All';
-    daySelect.appendChild(allOption);
+  const prevBtn  = document.getElementById('dayPrev');
+  const nextBtn  = document.getElementById('dayNext');
 
-    dates.forEach(iso => {
-      const option = document.createElement('option');
-      option.value = iso;
-      option.textContent = formatDate(iso);
-      daySelect.appendChild(option);
-    });
-
-    daySelect.value = activeDay;
-    daySelect.addEventListener('change', (e) => setDay(e.target.value, 'select'));
-  }
-
-  dates.forEach(iso => {
-    const btn = document.createElement('button');
-    btn.className = 'btn btn-filter';
-    btn.dataset.filter = iso;
-    btn.textContent = formatDate(iso);
-    btn.addEventListener('click', () => setDay(iso, 'button'));
-    bar.appendChild(btn);
+  prevBtn.addEventListener('click', () => {
+    if (carouselIndex > 0) {
+      carouselIndex--;
+      applyCarousel();
+    }
   });
 
-  document.querySelector('[data-filter="all"]')
-    .addEventListener('click', () => setDay('all', 'button'));
+  nextBtn.addEventListener('click', () => {
+    if (carouselIndex < carouselDates.length - 1) {
+      carouselIndex++;
+      applyCarousel();
+    }
+  });
+
+  applyCarousel();
+}
+
+function applyCarousel() {
+  const value  = carouselDates[carouselIndex];
+  const label  = document.getElementById('dayCarouselLabel');
+  const prevBtn = document.getElementById('dayPrev');
+  const nextBtn = document.getElementById('dayNext');
+
+  label.textContent = value === 'all' ? 'All Days' : formatDate(value);
+  prevBtn.disabled  = carouselIndex === 0;
+  nextBtn.disabled  = carouselIndex === carouselDates.length - 1;
+
+  setDay(value, 'carousel');
 }
 
 function setDay(value, source = 'unknown') {
   debugPan('setDay:start', { value, source });
   activeDay = value;
-  document.querySelectorAll('.btn-filter').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === value);
-  });
 
-  const daySelect = document.getElementById('daySelect');
-  if (daySelect && daySelect.value !== value) {
-    daySelect.value = value;
+  // Keep carouselIndex in sync if setDay is called from elsewhere
+  if (source !== 'carousel') {
+    const idx = carouselDates.indexOf(value);
+    if (idx !== -1) carouselIndex = idx;
+    applyCarousel();
+    return;
   }
 
   applyFilters();

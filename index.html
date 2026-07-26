@@ -48,18 +48,19 @@
   <!-- ── FILTER BAR ─────────────────────────────────────────── -->
   <nav class="filter-bar sticky-top px-3 px-md-5" id="filterBar">
 
-    <!-- Row 1: Day filter -->
-    <div class="filter-row day-filter-row d-flex flex-wrap align-items-center gap-2 py-2">
+    <!-- Row 1: Day carousel -->
+    <div class="filter-row day-filter-row d-flex align-items-center gap-2 py-2">
       <span class="filter-label me-1">
         <i class="bi bi-calendar3"></i> Day:
       </span>
-      <button class="btn btn-filter active" data-filter="all">All</button>
-      <!-- Day buttons injected by JS -->
-      <div class="day-select-wrap ms-auto">
-        <label class="visually-hidden" for="daySelect">Day</label>
-        <select id="daySelect" class="form-select form-select-sm day-select" aria-label="Select day">
-          <option value="all">All</option>
-        </select>
+      <div class="day-carousel">
+        <button class="day-carousel-btn" id="dayPrev" aria-label="Previous day">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <span class="day-carousel-label" id="dayCarouselLabel">All</span>
+        <button class="day-carousel-btn" id="dayNext" aria-label="Next day">
+          <i class="bi bi-chevron-right"></i>
+        </button>
       </div>
     </div>
 
